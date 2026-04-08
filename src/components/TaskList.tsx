@@ -13,7 +13,7 @@ function LoadingSkeleton() {
   return (
     <Grid container spacing={2}>
       {[1, 2, 3].map((i) => (
-        <Grid item xs={12} sm={6} md={4} key={i}>
+        <Grid {...({ item: true, xs: 12, sm: 6, md: 4 } as any)} key={i}>
           <Box sx={{ p: 2 }}>
             <Skeleton variant="text" width="60%" height={32} />
             <Skeleton variant="text" width="100%" />
@@ -32,7 +32,7 @@ export function TaskList({ tasks, isLoading, onEdit, onDelete }: TaskListProps) 
   return (
     <Grid container spacing={2}>
       {tasks.map((task) => (
-        <Grid item xs={12} sm={6} md={4} key={task.id}>
+        <Grid {...({ item: true, xs: 12, sm: 6, md: 4 } as any)} key={task.id}>
           <TaskCard task={task} onEdit={onEdit} onDelete={onDelete} />
         </Grid>
       ))}

@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  # Entorno de Desarrollo (Development Environment)
+  # Comando para iniciar: docker-compose up frontend-dev
+  frontend-dev:
+    build:
+      context: .
+      target: dev
+    container_name: planok-frontend-dev
+    ports:
+      - "5173:5173"
+    volumes:
+      # Montar código fuente para Hot Module Replacement (HMR)
+      - .:/app
+      # Evitar que la carpeta node_modules local sobrescriba la del contenedor
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+
+  # Entorno de Producción (Production Environment)
+  # Comando para iniciar: docker-compose up frontend-prod
+  frontend-prod:
+    build:
+      context: .
+      target: prod
+    container_name: planok-frontend-prod
+    ports:
+      - "8080:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped

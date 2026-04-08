@@ -90,11 +90,14 @@ export function TaskCard({ task, onEdit, onDelete }: TaskCardProps) {
                       )}
                     </ListItemIcon>
                     <ListItemText
-                      primary={st.title}
-                      primaryTypographyProps={{
-                        variant: 'body2',
-                        sx: { textDecoration: st.completed ? 'line-through' : 'none', color: st.completed ? 'text.disabled' : 'text.primary' },
-                      }}
+                      primary={
+                        <Typography
+                          variant="body2"
+                          sx={{ textDecoration: st.completed ? 'line-through' : 'none', color: st.completed ? 'text.disabled' : 'text.primary' }}
+                        >
+                          {st.title}
+                        </Typography>
+                      }
                     />
                   </ListItem>
                 ))}

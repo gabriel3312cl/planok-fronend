@@ -14,13 +14,15 @@ export function SearchBar() {
       size="small"
       fullWidth
       sx={{ maxWidth: { sm: 350 } }}
-      InputProps={{
-        startAdornment: (
-          <InputAdornment position="start">
-            <SearchIcon color="action" />
-          </InputAdornment>
-        ),
-      }}
+      {...({
+        InputProps: {
+          startAdornment: (
+            <InputAdornment position="start">
+              <SearchIcon color="action" />
+            </InputAdornment>
+          ),
+        }
+      } as any)}
     />
   );
 }

@@ -82,7 +82,7 @@ export function TasksPage() {
   return (
     <Container maxWidth="lg" sx={{ py: { xs: 2, sm: 4 } }}>
       <Box sx={{ mb: 4 }}>
-        <Typography variant="h4" component="h1" fontWeight={700} gutterBottom>
+        <Typography variant="h4" component="h1" sx={{ fontWeight: 700 }} gutterBottom>
           {env.appTitle}
         </Typography>
         <Typography variant="body1" color="text.secondary">

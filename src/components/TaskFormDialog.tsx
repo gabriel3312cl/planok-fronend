@@ -231,11 +231,14 @@ export function TaskFormDialog({ open, task, onClose, onSubmit, isSubmitting }: 
                       />
                     </ListItemIcon>
                     <ListItemText
-                      primary={st.title}
-                      primaryTypographyProps={{
-                        variant: 'body2',
-                        sx: { textDecoration: st.completed ? 'line-through' : 'none' },
-                      }}
+                      primary={
+                        <Typography
+                          variant="body2"
+                          sx={{ textDecoration: st.completed ? 'line-through' : 'none' }}
+                        >
+                          {st.title}
+                        </Typography>
+                      }
                     />
                   </ListItem>
                 ))}
