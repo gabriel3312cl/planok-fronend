@@ -1,0 +1,2251 @@
+﻿
+[1m[46m RUN [49m[22m [36mv4.1.3 [39m[90mC:/Users/squir/Desktop/planok-fronend[39m
+
+ [31mÔØ»[39m src/tests/integration/CategoryChip.test.tsx [2m([22m[2m0 test[22m[2m)[22m
+ [32mÔ£ô[39m src/tests/unit/env.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [31mÔØ»[39m src/tests/unit/task-service.test.ts [2m([22m[2m7 tests[22m[2m | [22m[31m2 failed[39m[2m)[22m[32m 51[2mms[22m[39m
+     [32mÔ£ô[39m getAll() debe retornar un array de tareas[32m 22[2mms[22m[39m
+[31m     [31m├ù[31m getAll() debe retornar tareas con la estructura correcta[39m[32m 5[2mms[22m[39m
+[31m     [31m├ù[31m create() debe crear una tarea y retornarla con id generado[39m[32m 5[2mms[22m[39m
+     [32mÔ£ô[39m getById() debe retornar una tarea existente[32m 4[2mms[22m[39m
+     [32mÔ£ô[39m update() debe actualizar los campos indicados[32m 4[2mms[22m[39m
+     [32mÔ£ô[39m remove() debe eliminar una tarea sin error[32m 4[2mms[22m[39m
+     [32mÔ£ô[39m getById() debe fallar con 404 para un id inexistente[32m 3[2mms[22m[39m
+ [32mÔ£ô[39m src/tests/unit/ui-store.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [31mÔØ»[39m src/tests/integration/msw-handlers.test.ts [2m([22m[2m10 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 81[2mms[22m[39m
+       [32mÔ£ô[39m debe manejar error 500 del servidor en getAll[32m 36[2mms[22m[39m
+       [32mÔ£ô[39m debe manejar error 500 en create[32m 7[2mms[22m[39m
+       [32mÔ£ô[39m debe manejar respuesta vac├¡a en getAll[32m 4[2mms[22m[39m
+       [32mÔ£ô[39m debe crear, leer, actualizar y eliminar una tarea[32m 11[2mms[22m[39m
+       [32mÔ£ô[39m suggestSubtasks debe responder con un array de strings[32m 3[2mms[22m[39m
+[31m       [31m├ù[31m classifyTask debe responder con una prioridad v├ílida[39m[32m 5[2mms[22m[39m
+       [32mÔ£ô[39m debe manejar override de handlers para IA[32m 3[2mms[22m[39m
+       [32mÔ£ô[39m debe manejar error de IA gracefully[32m 3[2mms[22m[39m
+       [32mÔ£ô[39m las tareas mock deben tener todos los campos requeridos[32m 2[2mms[22m[39m
+       [32mÔ£ô[39m create debe asignar valores por defecto correctos[32m 2[2mms[22m[39m
+ [31mÔØ»[39m src/tests/unit/ai-service.test.ts [2m([22m[2m11 tests[22m[2m | [22m[31m9 failed[39m[2m)[22m[32m 67[2mms[22m[39m
+[31m       [31m├ù[31m debe retornar subtareas para una descripci├│n sobre presentaci├│n[39m[32m 34[2mms[22m[39m
+       [32mÔ£ô[39m debe retornar subtareas gen├®ricas para descripci├│n sin palabras clave[32m 4[2mms[22m[39m
+[31m       [31m├ù[31m debe retornar subtareas para descripci├│n sobre estudio[39m[32m 3[2mms[22m[39m
+[31m       [31m├ù[31m debe retornar subtareas para descripci├│n sobre compras[39m[32m 3[2mms[22m[39m
+[31m       [31m├ù[31m debe clasificar como "urgente" una tarea con fecha l├¡mite[39m[32m 4[2mms[22m[39m
+       [32mÔ£ô[39m debe clasificar como "trabajo" una tarea de oficina[32m 2[2mms[22m[39m
+[31m       [31m├ù[31m debe clasificar como "estudio" una tarea educativa[39m[32m 3[2mms[22m[39m
+[31m       [31m├ù[31m debe clasificar como "personal" una tarea dom├®stica[39m[32m 2[2mms[22m[39m
+[31m       [31m├ù[31m debe clasificar como "salud" una tarea m├®dica[39m[32m 3[2mms[22m[39m
+[31m       [31m├ù[31m debe clasificar como "finanzas" una tarea econ├│mica[39m[32m 3[2mms[22m[39m
+[31m       [31m├ù[31m debe clasificar como "otro" si no hay palabras clave reconocibles[39m[32m 2[2mms[22m[39m
+ [31mÔØ»[39m src/tests/unit/hooks.test.tsx [2m([22m[2m10 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 410[2mms[22m[39m
+     [32mÔ£ô[39m debe cargar tareas desde la API mock[32m 96[2mms[22m[39m
+     [32mÔ£ô[39m debe crear una tarea nueva[32m 159[2mms[22m[39m
+     [32mÔ£ô[39m debe eliminar una tarea[32m 124[2mms[22m[39m
+     [32mÔ£ô[39m debe sugerir subtareas[32m 9[2mms[22m[39m
+     [32mÔ£ô[39m debe clasificar una tarea[32m 8[2mms[22m[39m
+     [32mÔ£ô[39m debe retornar todas las tareas si no hay b├║squeda[32m 2[2mms[22m[39m
+     [32mÔ£ô[39m debe filtrar tareas por t├¡tulo[32m 1[2mms[22m[39m
+[31m     [31m├ù[31m debe filtrar tareas por categor├¡a[39m[32m 3[2mms[22m[39m
+     [32mÔ£ô[39m debe retornar array vac├¡o si la b├║squeda no coincide[32m 1[2mms[22m[39m
+     [32mÔ£ô[39m debe ignorar espacios en blanco en la b├║squeda[32m 1[2mms[22m[39m
+ [31mÔØ»[39m src/tests/integration/StatusChip.test.tsx [2m([22m[2m3 tests[22m[2m | [22m[31m3 failed[39m[2m)[22m[32m 38[2mms[22m[39m
+[31m     [31m├ù[31m debe renderizar "Pendiente" para el estado "pendiente"[39m[32m 26[2mms[22m[39m
+[31m     [31m├ù[31m debe renderizar "En progreso" para el estado "en_progreso"[39m[32m 3[2mms[22m[39m
+[31m     [31m├ù[31m debe renderizar "Completada" para el estado "completada"[39m[32m 4[2mms[22m[39m
+node.exe : [90mstderr[2m | 
+src/tests/integration/SearchBar.test.tsx[2m > 
+[22m[2mSearchBar[2m > [22m[2mdebe renderizar 
+el input de b├║squeda
+En línea: 1 Carácter: 1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: 
+([90mstd    err[2m...ut de b├║squeda:String) [], 
+RemoteExcep    tion
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[22m[39mReact does not recognize the 
+`InputProps` prop on a DOM element. If you 
+intentionally want it to appear in the DOM as a 
+custom attribute, spell it as lowercase 
+`inputprops` instead. If you accidentally passed 
+it from a parent component, remove it from the DOM 
+element.
+
+[90mstderr[2m | 
+src/tests/integration/TaskList.test.tsx[2m > 
+[22m[2mTaskList[2m > [22m[2mdebe renderizar 
+skeleton cuando isLoading es true
+[22m[39mReceived `true` for a non-boolean 
+attribute `item`.
+
+If you want to write it to the DOM, pass a string 
+instead: item="true" or item={value.toString()}.
+
+ [32mÔ£ô[39m src/tests/integration/DeleteConfirmDialog.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[33m 456[2mms[22m[39m
+[90mstderr[2m | 
+src/tests/integration/TasksPage.test.tsx[2m > 
+[22m[2mTasksPage - integraci├│n completa[2m > 
+[22m[2mdebe mostrar el t├¡tulo de la aplicaci├│n
+[22m[39mReact does not recognize the 
+`InputProps` prop on a DOM element. If you 
+intentionally want it to appear in the DOM as a 
+custom attribute, spell it as lowercase 
+`inputprops` instead. If you accidentally passed 
+it from a parent component, remove it from the DOM 
+element.
+Received `true` for a non-boolean attribute `item`.
+
+If you want to write it to the DOM, pass a string 
+instead: item="true" or item={value.toString()}.
+
+ [32mÔ£ô[39m src/tests/integration/EmptyState.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 324[2mms[22m[39m
+ [32mÔ£ô[39m src/tests/integration/TaskList.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 299[2mms[22m[39m
+ [32mÔ£ô[39m src/tests/integration/SearchBar.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 484[2mms[22m[39m
+ [31mÔØ»[39m src/tests/integration/TaskCard.test.tsx [2m([22m[2m9 tests[22m[2m | [22m[31m4 failed[39m[2m)[22m[33m 417[2mms[22m[39m
+     [32mÔ£ô[39m debe renderizar el t├¡tulo y la descripci├│n de la tarea[32m 164[2mms[22m[39m
+[31m     [31m├ù[31m debe mostrar el chip de categor├¡a correcto[39m[32m 34[2mms[22m[39m
+     [32mÔ£ô[39m debe mostrar el chip de estado correcto[32m 16[2mms[22m[39m
+[31m     [31m├ù[31m debe mostrar el chip "Urgente" para tareas urgentes[39m[32m 18[2mms[22m[39m
+     [32mÔ£ô[39m debe llamar onEdit al hacer click en el bot├│n de editar[32m 117[2mms[22m[39m
+     [32mÔ£ô[39m debe llamar onDelete al hacer click en el bot├│n de eliminar[32m 47[2mms[22m[39m
+[31m     [31m├ù[31m debe mostrar el contador de subtareas si existen[39m[32m 5[2mms[22m[39m
+[31m     [31m├ù[31m debe expandir las subtareas al hacer click en "Ver subtareas"[39m[32m 3[2mms[22m[39m
+     [32mÔ£ô[39m no debe mostrar secci├│n de subtareas si la tarea no tiene[32m 9[2mms[22m[39m
+ [31mÔØ»[39m src/tests/integration/TaskFormDialog.test.tsx [2m([22m[2m15 tests[22m[2m | [22m[31m3 failed[39m[2m)[22m[33m 7846[2mms[22m[39m
+       [33m[2mÔ£ô[22m[39m debe mostrar t├¡tulo "Nueva tarea" [33m 361[2mms[22m[39m
+       [32mÔ£ô[39m debe mostrar campos vac├¡os[32m 64[2mms[22m[39m
+       [32mÔ£ô[39m debe mostrar error si se env├¡a sin t├¡tulo[32m 148[2mms[22m[39m
+[31m       [31m├ù[31m debe mostrar error si se env├¡a sin descripci├│n[39m[32m 249[2mms[22m[39m
+       [33m[2mÔ£ô[22m[39m debe llamar onSubmit con datos correctos [33m 1117[2mms[22m[39m
+       [32mÔ£ô[39m debe llamar onClose al hacer click en Cancelar[32m 71[2mms[22m[39m
+       [32mÔ£ô[39m debe mostrar t├¡tulo "Editar tarea"[32m 28[2mms[22m[39m
+       [32mÔ£ô[39m debe pre-poblar los campos con los datos de la tarea[32m 34[2mms[22m[39m
+       [32mÔ£ô[39m debe mostrar bot├│n "Actualizar" en lugar de "Crear"[32m 46[2mms[22m[39m
+       [32mÔ£ô[39m debe mostrar la secci├│n de Asistente IA[32m 37[2mms[22m[39m
+       [32mÔ£ô[39m debe tener bot├│n "Sugerir subtareas" deshabilitado sin descripci├│n[32m 47[2mms[22m[39m
+       [33m[2mÔ£ô[22m[39m debe habilitar "Sugerir subtareas" al escribir descripci├│n [33m 585[2mms[22m[39m
+[31m       [31m├ù[31m debe generar subtareas al hacer click en "Sugerir subtareas"[39m[33m 3756[2mms[22m[39m
+[31m       [31m├ù[31m debe clasificar la tarea al hacer click en "Auto-clasificar"[39m[33m 1243[2mms[22m[39m
+       [32mÔ£ô[39m debe mostrar "Guardando..." cuando isSubmitting es true[32m 54[2mms[22m[39m
+ [31mÔØ»[39m src/tests/integration/TasksPage.test.tsx [2m([22m[2m9 tests[22m[2m | [22m[31m3 failed[39m[2m)[22m[33m 17651[2mms[22m[39m
+     [32mÔ£ô[39m debe mostrar el t├¡tulo de la aplicaci├│n[32m 204[2mms[22m[39m
+[31m     [31m├ù[31m debe cargar y mostrar las tareas del mock[39m[33m 5016[2mms[22m[39m
+     [32mÔ£ô[39m debe mostrar barra de b├║squeda y bot├│n "Nueva tarea"[32m 69[2mms[22m[39m
+     [32mÔ£ô[39m debe abrir el dialog al hacer click en "Nueva tarea"[32m 227[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe crear una tarea nueva a trav├®s del formulario [33m 1809[2mms[22m[39m
+[31m     [31m├ù[31m debe filtrar tareas al escribir en la barra de b├║squeda[39m[33m 5002[2mms[22m[39m
+     [32mÔ£ô[39m debe abrir dialog de confirmaci├│n al eliminar una tarea[32m 146[2mms[22m[39m
+[31m     [31m├ù[31m debe eliminar una tarea tras confirmar[39m[33m 5003[2mms[22m[39m
+     [32mÔ£ô[39m debe abrir dialog de edici├│n al hacer click en editar[32m 169[2mms[22m[39m
+
+[31mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[39m[1m[41m Failed 
+Suites 1 [49m[22m[31mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/integration/CategoryChip.test.tsx[2m [ 
+src/tests/integration/CategoryChip.test.tsx ][22m
+[31m[1mError[22m: Failed to resolve import 
+"../../components/CategoryChip" from 
+"src/tests/integration/CategoryChip.test.tsx". 
+Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/squir/Desktop/planok-fronend/
+src/tests/integration/CategoryChip.test.tsx[39m:3:
+29
+[33m  1  |  import { describe, it, expect } from 
+"vitest";
+  2  |  import { screen } from 
+"@testing-library/react";
+  3  |  import { CategoryChip } from 
+"../../components/CategoryChip";
+     |                                ^
+  4  |  import { renderWithProviders } from 
+"../test-utils";
+  5  |  var _jsxFileName = "C:/Users/squir/Desktop/
+planok-fronend/src/tests/integration/CategoryChip.t
+est.tsx";[39m
+[90m [2mÔØ»[22m 
+TransformPluginContext._formatLog node_modules/vite
+/dist/node/chunks/node.js:[2m30354:39[22m[39m
+[90m [2mÔØ»[22m TransformPluginContext.error nod
+e_modules/vite/dist/node/chunks/node.js:[2m30351:1
+4[22m[39m
+[90m [2mÔØ»[22m normalizeUrl node_modules/vite/d
+ist/node/chunks/node.js:[2m27633:18[22m[39m
+[90m [2mÔØ»[22m node_modules/vite/dist/node/chun
+ks/node.js:[2m27696:30[22m[39m
+[90m [2mÔØ»[22m 
+TransformPluginContext.transform node_modules/vite/
+dist/node/chunks/node.js:[2m27664:4[22m[39m
+[90m [2mÔØ»[22m 
+EnvironmentPluginContainer.transform node_modules/v
+ite/dist/node/chunks/node.js:[2m30143:14[22m[39m
+[90m [2mÔØ»[22m loadAndTransform node_modules/vi
+te/dist/node/chunks/node.js:[2m24468:26[22m[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[1/27]ÔÄ»[22m[39m
+
+
+[31mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[39m[1m[41m Failed Tests 
+26 [49m[22m[31mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/integration/msw-handlers.test.ts[2m > 
+[22mMSW Handlers - pruebas con datos mock[2m > 
+[22mendpoints de IA con datos mock[2m > 
+[22mclassifyTask debe responder con una prioridad 
+v├ílida
+[31m[1mAssertionError[22m: expected [ 'low', 
+'medium', 'high', 'urgent' ] to include 
+'trabajo'[39m
+[36m [2mÔØ»[22m src/tests/integration/msw-handle
+rs.test.ts:[2m85:31[22m[39m
+    [90m 83|[39m       [35mconst[39m 
+validPriorities [33m=[39m 
+[[32m'low'[39m[33m,[39m 
+[32m'medium'[39m[33m,[39m 
+[32m'high'[39m[33m,[39m 
+[32m'urgent'[39m][33m;[39m
+    [90m 84|[39m       const result = await 
+aiService.classifyTask('Test', 'Ir al gym aÔÇª
+    [90m 85|[39m       [34mexpect[39m(validPrio
+rities)[33m.[39m[34mtoContain[39m(result)[33m;
+[39m
+    [90m   |[39m                               
+[31m^[39m
+    [90m 86|[39m     })[33m;[39m
+    [90m 87|[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[2/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/integration/StatusChip.test.tsx[2m > 
+[22mStatusChip[2m > [22mdebe renderizar 
+"Pendiente" para el estado "pendiente"
+[41m[1m FAIL [22m[49m 
+src/tests/integration/StatusChip.test.tsx[2m > 
+[22mStatusChip[2m > [22mdebe renderizar "En 
+progreso" para el estado "en_progreso"
+[41m[1m FAIL [22m[49m 
+src/tests/integration/StatusChip.test.tsx[2m > 
+[22mStatusChip[2m > [22mdebe renderizar 
+"Completada" para el estado "completada"
+[31m[1mTypeError[22m: Cannot read properties of 
+undefined (reading 'label')[39m
+[36m [2mÔØ»[22m StatusChip 
+src/components/StatusChip.tsx:[2m15:30[22m[39m
+    [90m 13|[39m [35mexport[39m 
+[35mfunction[39m [33mStatusChip[39m({ status 
+}[33m:[39m [33mStatusChipProps[39m) {
+    [90m 14|[39m   [35mconst[39m config 
+[33m=[39m statusConfig[status][33m;[39m
+    [90m 15|[39m   return <Chip 
+label={config.label} color={config.color} 
+size="small" ÔÇª
+    [90m   |[39m                              
+[31m^[39m
+    [90m 16|[39m }
+    [90m 17|[39m
+[90m [2mÔØ»[22m Object.react_stack_bottom_frame 
+node_modules/react-dom/cjs/react-dom-client.develop
+ment.js:[2m25904:20[22m[39m
+[90m [2mÔØ»[22m renderWithHooks node_modules/rea
+ct-dom/cjs/react-dom-client.development.js:[2m7662
+:22[22m[39m
+[90m [2mÔØ»[22m updateFunctionComponent node_mod
+ules/react-dom/cjs/react-dom-client.development.js:
+[2m10166:19[22m[39m
+[90m [2mÔØ»[22m beginWork node_modules/react-dom
+/cjs/react-dom-client.development.js:[2m11778:18[
+22m[39m
+[90m [2mÔØ»[22m runWithFiberInDEV node_modules/r
+eact-dom/cjs/react-dom-client.development.js:[2m87
+4:13[22m[39m
+[90m [2mÔØ»[22m performUnitOfWork node_modules/r
+eact-dom/cjs/react-dom-client.development.js:[2m17
+641:22[22m[39m
+[90m [2mÔØ»[22m workLoopSync node_modules/react-
+dom/cjs/react-dom-client.development.js:[2m17469:4
+1[22m[39m
+[90m [2mÔØ»[22m renderRootSync node_modules/reac
+t-dom/cjs/react-dom-client.development.js:[2m17450
+:11[22m[39m
+[90m [2mÔØ»[22m performWorkOnRoot node_modules/r
+eact-dom/cjs/react-dom-client.development.js:[2m16
+583:35[22m[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[3/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/integration/TaskCard.test.tsx[2m > 
+[22mTaskCard[2m > [22mdebe mostrar el chip de 
+categor├¡a correcto
+[31m[1mTestingLibraryElementError[22m[39m: 
+Unable to find an element with the text: Trabajo. 
+This could be because the text is broken up by 
+multiple elements. In this case, you can provide a 
+function for your text matcher to make your 
+matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"MuiPaper-root 
+MuiPaper-elevation MuiPaper-rounded 
+MuiPaper-elevation1 MuiCard-root 
+css-co1fum-MuiPaper-root-MuiCard-root"[39m
+      [33mstyle[39m=[32m"--Paper-shadow: 0px 
+2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px 
+rgba(0,0,0,0.14),0px 1px 3px 0px 
+rgba(0,0,0,0.12);"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiCardContent-root 
+css-t1d98c-MuiCardContent-root"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiBox-root 
+css-11m1mi9"[39m
+        [36m>[39m
+          [36m<h3[39m
+            
+[33mclass[39m=[32m"MuiTypography-root 
+MuiTypography-h6 
+css-533516-MuiTypography-root"[39m
+          [36m>[39m
+            [0mTarea de prueba[0m
+          [36m</h3>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"MuiChip-root 
+MuiChip-outlined MuiChip-sizeSmall 
+MuiChip-colorDefault css-1b7jmuh-MuiChip-root"[39m
+          [36m>[39m
+            [36m<span[39m
+              [33mclass[39m=[32m"MuiChip-label 
+css-19m61dl-MuiChip-label"[39m
+            [36m>[39m
+              [0mPendiente[0m
+            [36m</span>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m"MuiTypography-root 
+MuiTypography-body2 
+css-r8fnjt-MuiTypography-root"[39m
+        [36m>[39m
+          [0mDescripci├│n de la tarea de prueba 
+para testing[0m
+        [36m</p>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiBox-root 
+css-1x99n9k"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"MuiChip-root 
+MuiChip-filled MuiChip-sizeSmall 
+MuiChip-colorDefault css-10kgae0-MuiChip-root"[39m
+          [36m>[39m
+            [36m<svg[39m
+              
+[33maria-hidden[39m=[32m"true"[39m
+              
+[33mclass[39m=[32m"MuiSvgIcon-root 
+MuiSvgIcon-fontSizeSmall MuiChip-icon 
+css-120dh41-MuiSvgIcon-root"[39m
+              
+[33mdata-testid[39m=[32m"ArrowRightAltIcon"[39m
+              [33mfocusable[39m=[32m"false"[39m
+              [33mviewBox[39m=[32m"0 0 24 
+24"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33md[39m=[32m"M16.01 
+11H4v2h12.01v3L20 12l-3.99-4z"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+            [36m<span[39m
+              [33mclass[39m=[32m"MuiChip-label 
+css-eccknh-MuiChip-label"[39m
+            [36m>[39m
+              [0mMedia[0m
+            [36m</span>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiCardActions-root 
+MuiCardActions-spacing 
+css-13wwrsh-MuiCardActions-root"[39m
+      [36m>[39m
+        [36m<button[39m
+          [33maria-label[39m=[32m"Editar"[39m
+          [33mclass[39m=[32m"MuiButtonBase-root 
+MuiIconButton-root MuiIconButton-colorPrimary 
+MuiIconButton-sizeSmall css-163fxjx-MuiButtonBase-r
+oot-MuiIconButton-root"[39m
+          [33mdata-mui-internal-clone-element[39m
+=[32m"true"[39m
+          [33mtabindex[39m=[32m"0"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [36m<svg[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiSvgIcon-root 
+MuiSvgIcon-fontSizeSmall 
+css-120dh41-MuiSvgIcon-root"[39m
+            
+[33mdata-testid[39m=[32m"EditIcon"[39m
+            [33mfocusable[39m=[32m"false"[39m
+            [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M3 
+17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 
+7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 
+0 0-1.41 0l-1.83 1.83 3.75 3.75z"[39m
+            [36m/>[39m
+          [36m</svg>[39m
+        [36m</button>[39m
+        [36m<button[39m
+          [33maria-label[39m=[32m"Eliminar"[39m
+          [33mclass[39m=[32m"MuiButtonBase-root 
+MuiIconButton-root MuiIconButton-colorError 
+MuiIconButton-sizeSmall css-195ve3w-MuiButtonBase-r
+oot-MuiIconButton-root"[39m
+          [33mdata-mui-internal-clone-element[39m
+=[32m"true"[39m
+          [33mtabindex[39m=[32m"0"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [36m<svg[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiSvgIcon-root 
+MuiSvgIcon-fontSizeSmall 
+css-120dh41-MuiSvgIcon-root"[39m
+            
+[33mdata-testid[39m=[32m"DeleteIcon"[39m
+            [33mfocusable[39m=[32m"false"[39m
+            [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M6 19c0 1.1.9 2 2 
+2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 
+1H5v2h14z"[39m
+            [36m/>[39m
+          [36m</svg>[39m
+        [36m</button>[39m
+      [36m</div>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</body>[39m
+[90m [2mÔØ»[22m Object.getElementError node_modu
+les/@testing-library/dom/dist/config.js:[2m37:19[
+22m[39m
+[90m [2mÔØ»[22m node_modules/@testing-library/do
+m/dist/query-helpers.js:[2m76:38[22m[39m
+[90m [2mÔØ»[22m node_modules/@testing-library/do
+m/dist/query-helpers.js:[2m52:17[22m[39m
+[90m [2mÔØ»[22m node_modules/@testing-library/do
+m/dist/query-helpers.js:[2m95:19[22m[39m
+[36m [2mÔØ»[22m src/tests/integration/TaskCard.t
+est.tsx:[2m22:19[22m[39m
+    [90m 20|[39m   [34mit[39m([32m'debe 
+mostrar el chip de categor├¡a 
+correcto'[39m[33m,[39m () [33m=>[39m {
+    [90m 21|[39m     
+renderWithProviders(<TaskCard task={mockTask} 
+{...defaultProps} />ÔÇª
+    [90m 22|[39m     [34mexpect[39m(screen[33m
+.[39m[34mgetByText[39m([32m'Trabajo'[39m))[33
+m.[39m[34mtoBeInTheDocument[39m()[33m;[39m
+    [90m   |[39m                   [31m^[39m
+    [90m 23|[39m   })[33m;[39m
+    [90m 24|[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[4/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/integration/TaskCard.test.tsx[2m > 
+[22mTaskCard[2m > [22mdebe mostrar el chip 
+"Urgente" para tareas urgentes
+[31m[1mTestingLibraryElementError[22m[39m: 
+Unable to find an element with the text: En 
+progreso. This could be because the text is broken 
+up by multiple elements. In this case, you can 
+provide a function for your text matcher to make 
+your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"MuiPaper-root 
+MuiPaper-elevation MuiPaper-rounded 
+MuiPaper-elevation1 MuiCard-root 
+css-co1fum-MuiPaper-root-MuiCard-root"[39m
+      [33mstyle[39m=[32m"--Paper-shadow: 0px 
+2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px 
+rgba(0,0,0,0.14),0px 1px 3px 0px 
+rgba(0,0,0,0.12);"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiCardContent-root 
+css-t1d98c-MuiCardContent-root"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiBox-root 
+css-11m1mi9"[39m
+        [36m>[39m
+          [36m<h3[39m
+            
+[33mclass[39m=[32m"MuiTypography-root 
+MuiTypography-h6 
+css-533516-MuiTypography-root"[39m
+          [36m>[39m
+            [0mEntrega urgente[0m
+          [36m</h3>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"MuiChip-root 
+MuiChip-outlined MuiChip-sizeSmall 
+MuiChip-colorDefault css-1b7jmuh-MuiChip-root"[39m
+          [36m>[39m
+            [36m<span[39m
+              [33mclass[39m=[32m"MuiChip-label 
+css-19m61dl-MuiChip-label"[39m
+            [36m>[39m
+              [0mPendiente[0m
+            [36m</span>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m"MuiTypography-root 
+MuiTypography-body2 
+css-r8fnjt-MuiTypography-root"[39m
+        [36m>[39m
+          [0mFecha l├¡mite ma├▒ana, entregar 
+informe al cliente[0m
+        [36m</p>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiBox-root 
+css-1x99n9k"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"MuiChip-root 
+MuiChip-filled MuiChip-sizeSmall 
+MuiChip-colorDefault css-1nva4am-MuiChip-root"[39m
+          [36m>[39m
+            [36m<svg[39m
+              
+[33maria-hidden[39m=[32m"true"[39m
+              
+[33mclass[39m=[32m"MuiSvgIcon-root 
+MuiSvgIcon-fontSizeSmall MuiChip-icon 
+css-120dh41-MuiSvgIcon-root"[39m
+              
+[33mdata-testid[39m=[32m"PriorityHighIcon"[39m
+              [33mfocusable[39m=[32m"false"[39m
+              [33mviewBox[39m=[32m"0 0 24 
+24"[39m
+            [36m>[39m
+              [36m<circle[39m
+                [33mcx[39m=[32m"12"[39m
+                [33mcy[39m=[32m"19"[39m
+                [33mr[39m=[32m"2"[39m
+              [36m/>[39m
+              [36m<path[39m
+                [33md[39m=[32m"M10 
+3h4v12h-4z"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+            [36m<span[39m
+              [33mclass[39m=[32m"MuiChip-label 
+css-eccknh-MuiChip-label"[39m
+            [36m>[39m
+              [0mUrgente[0m
+            [36m</span>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiCardActions-root 
+MuiCardActions-spacing 
+css-13wwrsh-MuiCardActions-root"[39m
+      [36m>[39m
+        [36m<button[39m
+          [33maria-label[39m=[32m"Editar"[39m
+          [33mclass[39m=[32m"MuiButtonBase-root 
+MuiIconButton-root MuiIconButton-colorPrimary 
+MuiIconButton-sizeSmall css-163fxjx-MuiButtonBase-r
+oot-MuiIconButton-root"[39m
+          [33mdata-mui-internal-clone-element[39m
+=[32m"true"[39m
+          [33mtabindex[39m=[32m"0"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [36m<svg[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiSvgIcon-root 
+MuiSvgIcon-fontSizeSmall 
+css-120dh41-MuiSvgIcon-root"[39m
+            
+[33mdata-testid[39m=[32m"EditIcon"[39m
+            [33mfocusable[39m=[32m"false"[39m
+            [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M3 
+17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 
+7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 
+0 0-1.41 0l-1.83 1.83 3.75 3.75z"[39m
+            [36m/>[39m
+          [36m</svg>[39m
+        [36m</button>[39m
+        [36m<button[39m
+          [33maria-label[39m=[32m"Eliminar"[39m
+          [33mclass[39m=[32m"MuiButtonBase-root 
+MuiIconButton-root MuiIconButton-colorError 
+MuiIconButton-sizeSmall css-195ve3w-MuiButtonBase-r
+oot-MuiIconButton-root"[39m
+          [33mdata-mui-internal-clone-element[39m
+=[32m"true"[39m
+          [33mtabindex[39m=[32m"0"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [36m<svg[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiSvgIcon-root 
+MuiSvgIcon-fontSizeSmall 
+css-120dh41-MuiSvgIcon-root"[39m
+            
+[33mdata-testid[39m=[32m"DeleteIcon"[39m
+            [33mfocusable[39m=[32m"false"[39m
+            [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M6 19c0 1.1.9 2 2 
+2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 
+1H5v2h14z"[39m
+            [36m/>[39m
+          [36m</svg>[39m
+        [36m</button>[39m
+      [36m</div>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</body>[39m
+[90m [2mÔØ»[22m Object.getElementError node_modu
+les/@testing-library/dom/dist/config.js:[2m37:19[
+22m[39m
+[90m [2mÔØ»[22m node_modules/@testing-library/do
+m/dist/query-helpers.js:[2m76:38[22m[39m
+[90m [2mÔØ»[22m node_modules/@testing-library/do
+m/dist/query-helpers.js:[2m52:17[22m[39m
+[90m [2mÔØ»[22m node_modules/@testing-library/do
+m/dist/query-helpers.js:[2m95:19[22m[39m
+[36m [2mÔØ»[22m src/tests/integration/TaskCard.t
+est.tsx:[2m33:19[22m[39m
+    [90m 31|[39m     
+renderWithProviders(<TaskCard 
+task={mockTaskUrgent} {...defaultProÔÇª
+    [90m 32|[39m     [34mexpect[39m(screen[33m
+.[39m[34mgetByText[39m([32m'Urgente'[39m))[33
+m.[39m[34mtoBeInTheDocument[39m()[33m;[39m
+    [90m 33|[39m     [34mexpect[39m(screen[33m
+.[39m[34mgetByText[39m([32m'En progreso'[39m))
+[33m.[39m[34mtoBeInTheDocument[39m()[33m;[39m
+    [90m   |[39m                   [31m^[39m
+    [90m 34|[39m   })[33m;[39m
+    [90m 35|[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[5/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/integration/TaskCard.test.tsx[2m > 
+[22mTaskCard[2m > [22mdebe mostrar el contador 
+de subtareas si existen
+[41m[1m FAIL [22m[49m 
+src/tests/integration/TaskCard.test.tsx[2m > 
+[22mTaskCard[2m > [22mdebe expandir las 
+subtareas al hacer click en "Ver subtareas"
+[31m[1mTypeError[22m: Cannot read properties of 
+undefined (reading 'title')[39m
+[36m [2mÔØ»[22m TaskCard 
+src/components/TaskCard.tsx:[2m39:19[22m[39m
+    [90m 37|[39m         <Box sx={{ display: 
+'flex', justifyContent: 'space-between', aÔÇª
+    [90m 38|[39m           <Typography 
+variant="h6" component="h3" sx={{ fontSize: '1reÔÇª
+    [90m 39|[39m             
+[33m{[39mtask[33m.[39mtitle[33m}[39m
+    [90m   |[39m                   [31m^[39m
+    [90m 40|[39m           [33m<[39m[33m/[39m
+[33mTypography[39m[33m>[39m
+    [90m 41|[39m           
+[33m<[39m[33mStatusChip[39m [33mstatus[39m[3
+3m=[39m[33m{[39mtask[33m.[39mstatus[33m}[39m
+ [33m/[39m[33m>[39m
+[90m [2mÔØ»[22m Object.react_stack_bottom_frame 
+node_modules/react-dom/cjs/react-dom-client.develop
+ment.js:[2m25904:20[22m[39m
+[90m [2mÔØ»[22m renderWithHooks node_modules/rea
+ct-dom/cjs/react-dom-client.development.js:[2m7662
+:22[22m[39m
+[90m [2mÔØ»[22m updateFunctionComponent node_mod
+ules/react-dom/cjs/react-dom-client.development.js:
+[2m10166:19[22m[39m
+[90m [2mÔØ»[22m beginWork node_modules/react-dom
+/cjs/react-dom-client.development.js:[2m11778:18[
+22m[39m
+[90m [2mÔØ»[22m runWithFiberInDEV node_modules/r
+eact-dom/cjs/react-dom-client.development.js:[2m87
+4:13[22m[39m
+[90m [2mÔØ»[22m performUnitOfWork node_modules/r
+eact-dom/cjs/react-dom-client.development.js:[2m17
+641:22[22m[39m
+[90m [2mÔØ»[22m workLoopSync node_modules/react-
+dom/cjs/react-dom-client.development.js:[2m17469:4
+1[22m[39m
+[90m [2mÔØ»[22m renderRootSync node_modules/reac
+t-dom/cjs/react-dom-client.development.js:[2m17450
+:11[22m[39m
+[90m [2mÔØ»[22m performWorkOnRoot node_modules/r
+eact-dom/cjs/react-dom-client.development.js:[2m16
+583:35[22m[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[6/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/integration/TaskFormDialog.test.tsx[2m 
+> [22mTaskFormDialog[2m > [22mmodo crear[2m > 
+[22mdebe mostrar error si se env├¡a sin 
+descripci├│n
+[31m[1mTestingLibraryElementError[22m[39m: 
+Unable to find an element with the text: La 
+descripci├│n es obligatoria. This could be because 
+the text is broken up by multiple elements. In 
+this case, you can provide a function for your 
+text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body[39m
+  [33mstyle[39m=[32m"padding-right: 1024px; 
+overflow: hidden;"[39m
+[36m>[39m
+  [36m<div[39m
+    [33maria-hidden[39m=[32m"true"[39m
+  [36m/>[39m
+  [36m<div[39m
+    [33mclass[39m=[32m"MuiDialog-root 
+MuiModal-root 
+css-1424xw8-MuiModal-root-MuiDialog-root"[39m
+    [33mrole[39m=[32m"presentation"[39m
+  [36m>[39m
+    [36m<div[39m
+      [33maria-hidden[39m=[32m"true"[39m
+      [33mclass[39m=[32m"MuiBackdrop-root 
+MuiModal-backdrop MuiDialog-backdrop css-1cennmq-Mu
+iBackdrop-root-MuiDialog-backdrop"[39m
+      [33mstyle[39m=[32m"opacity: 1; 
+transition: opacity 225ms cubic-bezier(0.4, 0, 
+0.2, 1) 0ms;"[39m
+    [36m/>[39m
+    [36m<div[39m
+      
+[33mdata-testid[39m=[32m"sentinelStart"[39m
+      [33mtabindex[39m=[32m"0"[39m
+    [36m/>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"MuiDialog-container 
+MuiDialog-scrollPaper 
+css-19do60a-MuiDialog-container"[39m
+      [33mrole[39m=[32m"presentation"[39m
+      [33mstyle[39m=[32m"opacity: 1; 
+transition: opacity 225ms cubic-bezier(0.4, 0, 
+0.2, 1) 0ms;"[39m
+      [33mtabindex[39m=[32m"-1"[39m
+    [36m>[39m
+      [36m<div[39m
+        
+[33maria-labelledby[39m=[32m"_r_1b_"[39m
+        [33maria-modal[39m=[32m"true"[39m
+        [33mclass[39m=[32m"MuiPaper-root 
+MuiPaper-elevation MuiPaper-rounded 
+MuiPaper-elevation24 MuiDialog-paper 
+MuiDialog-paperWidthSm MuiDialog-paperFullWidth 
+css-12u9ee0-MuiPaper-root-MuiDialog-paper"[39m
+        [33mrole[39m=[32m"dialog"[39m
+        [33mstyle[39m=[32m"--Paper-shadow: 0px 
+11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px 
+rgba(0,0,0,0.14),0px 9px 46px 8px 
+rgba(0,0,0,0.12);"[39m
+      [36m>[39m
+        [36m<h2[39m
+          [33mclass[39m=[32m"MuiTypography-root 
+MuiTypography-h6 MuiDialogTitle-root css-1erdce5-Mu
+iTypography-root-MuiDialogTitle-root"[39m
+          [33mid[39m=[32m"_r_1b_"[39m
+        [36m>[39m
+          [0mNueva tarea[0m
+        [36m</h2>[39m
+        [36m<div[39m
+          
+[33mclass[39m=[32m"MuiDialogContent-root 
+MuiDialogContent-dividers 
+css-10bxh4q-MuiDialogContent-root"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"MuiBox-root 
+css-hiv0t3"[39m
+          [36m>[39m
+            [36m<div[39m
+              
+[33mclass[39m=[32m"MuiFormControl-root 
+MuiFormControl-fullWidth MuiTextField-root css-cmpg
+lg-MuiFormControl-root-MuiTextField-root"[39m
+            [36m>[39m
+              [36m<label[39m
+                
+[33mclass[39m=[32m"MuiFormLabel-root 
+MuiInputLabel-root MuiInputLabel-formControl 
+MuiInputLabel-animated MuiInputLabel-shrink 
+MuiInputLabel-outlined MuiFormLabel-colorPrimary 
+MuiFormLabel-filled MuiInputLabel-root 
+MuiInputLabel-formControl MuiInputLabel-animated 
+MuiInputLabel-shrink MuiInputLabel-outlined css-1ro
+k73o-MuiFormLabel-root-MuiInputLabel-root"[39m
+                
+[33mdata-shrink[39m=[32m"true"[39m
+                [33mfor[39m=[32m"_r_1c_"[39m
+                
+[33mid[39m=[32m"_r_1c_-label"[39m
+              [36m>[39m
+                [0mT├¡tulo[0m
+              [36m</label>[39m
+              [36m<div[39m
+                
+[33mclass[39m=[32m"MuiInputBase-root 
+MuiOutlinedInput-root MuiInputBase-colorPrimary 
+MuiInputBase-fullWidth MuiInputBase-formControl css
+-1up3t6r-MuiInputBase-root-MuiOutlinedInput-root"[
+39m
+              [36m>[39m
+                [36m<input[39m
+                  
+[33maria-invalid[39m=[32m"false"[39m
+                  
+[33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-16wblaj-MuiInputBase-inp
+ut-MuiOutlinedInput-input"[39m
+                  [33mid[39m=[32m"_r_1c_"[39m
+                  [33mtype[39m=[32m"text"[39m
+                  [33mvalue[39m=[32m"Test"[39m
+                [36m/>[39m
+                [36m<fieldset[39m
+                  
+[33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"MuiOutlined
+Input-notchedOutline css-18p5xg2-MuiNotchedOutlined
+-root-MuiOutlinedInput-notchedOutline"[39m
+                [36m>[39m
+                  [36m<legend[39m
+                    [33mclass[39m=[32m"css-ex8a5
+f-MuiNotchedOutlined-root"[39m
+                  [36m>[39m
+                    [36m<span>[39m
+                      [0mT├¡tulo[0m
+                    [36m</span>[39m
+                  [36m</legend>[39m
+                [36m</fieldset>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              
+[33mclass[39m=[32m"MuiFormControl-root 
+MuiFormControl-fullWidth MuiTextField-root css-cmpg
+lg-MuiFormControl-root-MuiTextField-root"[39m
+            [36m>[39m
+              [36m<label[39m
+                
+[33mclass[39m=[32m"MuiFormLabel-root 
+MuiInputLabel-root MuiInputLabel-formControl 
+MuiInputLabel-animated MuiInputLabel-outlined 
+MuiFormLabel-colorPrimary MuiInputLabel-root 
+MuiInputLabel-formControl MuiInputLabel-animated 
+MuiInputLabel-outlined css-79nsfh-MuiFormLabel-root
+-MuiInputLabel-root"[39m
+                
+[33mdata-shrink[39m=[32m"false"[39m
+                [33mfor[39m=[32m"_r_1d_"[39m
+                
+[33mid[39m=[32m"_r_1d_-label"[39m
+              [36m>[39m
+                [0mDescripci├│n[0m
+              [36m</label>[39m
+              [36m<div[39m
+                
+[33mclass[39m=[32m"MuiInputBase-root 
+MuiOutlinedInput-root MuiInputBase-colorPrimary 
+MuiInputBase-fullWidth MuiInputBase-formControl 
+MuiInputBase-multiline css-oj8vyf-MuiInputBase-root
+-MuiOutlinedInput-root"[39m
+              [36m>[39m
+                [36m<textarea[39m
+                  
+[33maria-invalid[39m=[32m"false"[39m
+                  
+[33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-w4nesw-MuiInputBase-inpu
+t-MuiOutlinedInput-input"[39m
+                  [33mid[39m=[32m"_r_1d_"[39m
+                  [33mrows[39m=[32m"5"[39m
+                  [33mstyle[39m=[32m"height: 
+0px; overflow: hidden;"[39m
+                [36m/>[39m
+                [36m<textarea[39m
+                  
+[33maria-hidden[39m=[32m"true"[39m
+                  
+[33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-w4nesw-MuiInputBase-inpu
+t-MuiOutlinedInput-input"[39m
+                  [33mreadonly[39m=[32m""[39m
+                  
+[33mstyle[39m=[32m"visibility: hidden; 
+position: absolute; overflow: hidden; height: 0px; 
+top: 0px; left: 0px; transform: translateZ(0); 
+padding-top: 0px; padding-bottom: 0px; width: 
+100%;"[39m
+                  [33mtabindex[39m=[32m"-1"[39m
+                [36m/>[39m
+                [36m<fieldset[39m
+                  
+[33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"MuiOutlined
+Input-notchedOutline css-18p5xg2-MuiNotchedOutlined
+-root-MuiOutlinedInput-notchedOutline"[39m
+                [36m>[39m
+                  [36m<legend[39m
+                    [33mclass[39m=[32m"css-1n64c
+sd-MuiNotchedOutlined-root"[39m
+                  [36m>[39m
+                ...
+[90m [2mÔØ»[22m Object.getElementError node_modu
+les/@testing-library/dom/dist/config.js:[2m37:19[
+22m[39m
+[90m [2mÔØ»[22m node_modules/@testing-library/do
+m/dist/query-helpers.js:[2m76:38[22m[39m
+[90m [2mÔØ»[22m node_modules/@testing-library/do
+m/dist/query-helpers.js:[2m52:17[22m[39m
+[90m [2mÔØ»[22m node_modules/@testing-library/do
+m/dist/query-helpers.js:[2m95:19[22m[39m
+[36m [2mÔØ»[22m src/tests/integration/TaskFormDi
+alog.test.tsx:[2m39:21[22m[39m
+    [90m 37|[39m       [35mawait[39m userEvent
+[33m.[39m[34mtype[39m(screen[33m.[39m[34mgetB
+yLabelText[39m([32m'T├¡tulo'[39m)[33m,[39m 
+[32m'Test'[39m)[33m;[39m
+    [90m 38|[39m       await 
+userEvent.click(screen.getByRole('button', { name: 
+/crear/ÔÇª
+    [90m 39|[39m       
+expect(screen.getByText('La descripci├│n es 
+obligatoria')).toBeInÔÇª
+    [90m   |[39m                     [31m^[39m
+    [90m 40|[39m     })[33m;[39m
+    [90m 41|[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[7/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/integration/TaskFormDialog.test.tsx[2m 
+> [22mTaskFormDialog[2m > [22msecci├│n IA[2m > 
+[22mdebe generar subtareas al hacer click en 
+"Sugerir subtareas"
+[31m[1mTestingLibraryElementError[22m[39m: 
+Unable to find an element with the text: 
+/Generadas por IA/. This could be because the text 
+is broken up by multiple elements. In this case, 
+you can provide a function for your text matcher 
+to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body[39m
+  [33mstyle[39m=[32m"padding-right: 1024px; 
+overflow: hidden;"[39m
+[36m>[39m
+  [36m<div[39m
+    [33maria-hidden[39m=[32m"true"[39m
+  [36m/>[39m
+  [36m<div[39m
+    [33mclass[39m=[32m"MuiDialog-root 
+MuiModal-root 
+css-1424xw8-MuiModal-root-MuiDialog-root"[39m
+    [33mrole[39m=[32m"presentation"[39m
+  [36m>[39m
+    [36m<div[39m
+      [33maria-hidden[39m=[32m"true"[39m
+      [33mclass[39m=[32m"MuiBackdrop-root 
+MuiModal-backdrop MuiDialog-backdrop css-1cennmq-Mu
+iBackdrop-root-MuiDialog-backdrop"[39m
+      [33mstyle[39m=[32m"opacity: 1; 
+transition: opacity 225ms cubic-bezier(0.4, 0, 
+0.2, 1) 0ms;"[39m
+    [36m/>[39m
+    [36m<div[39m
+      
+[33mdata-testid[39m=[32m"sentinelStart"[39m
+      [33mtabindex[39m=[32m"0"[39m
+    [36m/>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"MuiDialog-container 
+MuiDialog-scrollPaper 
+css-19do60a-MuiDialog-container"[39m
+      [33mrole[39m=[32m"presentation"[39m
+      [33mstyle[39m=[32m"opacity: 1; 
+transition: opacity 225ms cubic-bezier(0.4, 0, 
+0.2, 1) 0ms;"[39m
+      [33mtabindex[39m=[32m"-1"[39m
+    [36m>[39m
+      [36m<div[39m
+        
+[33maria-labelledby[39m=[32m"_r_59_"[39m
+        [33maria-modal[39m=[32m"true"[39m
+        [33mclass[39m=[32m"MuiPaper-root 
+MuiPaper-elevation MuiPaper-rounded 
+MuiPaper-elevation24 MuiDialog-paper 
+MuiDialog-paperWidthSm MuiDialog-paperFullWidth 
+css-12u9ee0-MuiPaper-root-MuiDialog-paper"[39m
+        [33mrole[39m=[32m"dialog"[39m
+        [33mstyle[39m=[32m"--Paper-shadow: 0px 
+11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px 
+rgba(0,0,0,0.14),0px 9px 46px 8px 
+rgba(0,0,0,0.12);"[39m
+      [36m>[39m
+        [36m<h2[39m
+          [33mclass[39m=[32m"MuiTypography-root 
+MuiTypography-h6 MuiDialogTitle-root css-1erdce5-Mu
+iTypography-root-MuiDialogTitle-root"[39m
+          [33mid[39m=[32m"_r_59_"[39m
+        [36m>[39m
+          [0mNueva tarea[0m
+        [36m</h2>[39m
+        [36m<div[39m
+          
+[33mclass[39m=[32m"MuiDialogContent-root 
+MuiDialogContent-dividers 
+css-10bxh4q-MuiDialogContent-root"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"MuiBox-root 
+css-hiv0t3"[39m
+          [36m>[39m
+            [36m<div[39m
+              
+[33mclass[39m=[32m"MuiFormControl-root 
+MuiFormControl-fullWidth MuiTextField-root css-cmpg
+lg-MuiFormControl-root-MuiTextField-root"[39m
+            [36m>[39m
+              [36m<label[39m
+                
+[33mclass[39m=[32m"MuiFormLabel-root 
+MuiInputLabel-root MuiInputLabel-formControl 
+MuiInputLabel-animated MuiInputLabel-outlined 
+MuiFormLabel-colorPrimary MuiInputLabel-root 
+MuiInputLabel-formControl MuiInputLabel-animated 
+MuiInputLabel-outlined css-79nsfh-MuiFormLabel-root
+-MuiInputLabel-root"[39m
+                
+[33mdata-shrink[39m=[32m"false"[39m
+                [33mfor[39m=[32m"_r_5a_"[39m
+                
+[33mid[39m=[32m"_r_5a_-label"[39m
+              [36m>[39m
+                [0mT├¡tulo[0m
+              [36m</label>[39m
+              [36m<div[39m
+                
+[33mclass[39m=[32m"MuiInputBase-root 
+MuiOutlinedInput-root MuiInputBase-colorPrimary 
+MuiInputBase-fullWidth MuiInputBase-formControl css
+-1up3t6r-MuiInputBase-root-MuiOutlinedInput-root"[
+39m
+              [36m>[39m
+                [36m<input[39m
+                  
+[33maria-invalid[39m=[32m"false"[39m
+                  
+[33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-16wblaj-MuiInputBase-inp
+ut-MuiOutlinedInput-input"[39m
+                  [33mid[39m=[32m"_r_5a_"[39m
+                  [33mtype[39m=[32m"text"[39m
+                  [33mvalue[39m=[32m""[39m
+                [36m/>[39m
+                [36m<fieldset[39m
+                  
+[33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"MuiOutlined
+Input-notchedOutline css-18p5xg2-MuiNotchedOutlined
+-root-MuiOutlinedInput-notchedOutline"[39m
+                [36m>[39m
+                  [36m<legend[39m
+                    [33mclass[39m=[32m"css-1n64c
+sd-MuiNotchedOutlined-root"[39m
+                  [36m>[39m
+                    [36m<span>[39m
+                      [0mT├¡tulo[0m
+                    [36m</span>[39m
+                  [36m</legend>[39m
+                [36m</fieldset>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              
+[33mclass[39m=[32m"MuiFormControl-root 
+MuiFormControl-fullWidth MuiTextField-root css-cmpg
+lg-MuiFormControl-root-MuiTextField-root"[39m
+            [36m>[39m
+              [36m<label[39m
+                
+[33mclass[39m=[32m"MuiFormLabel-root 
+MuiInputLabel-root MuiInputLabel-formControl 
+MuiInputLabel-animated MuiInputLabel-shrink 
+MuiInputLabel-outlined MuiFormLabel-colorPrimary 
+MuiFormLabel-filled MuiInputLabel-root 
+MuiInputLabel-formControl MuiInputLabel-animated 
+MuiInputLabel-shrink MuiInputLabel-outlined css-1ro
+k73o-MuiFormLabel-root-MuiInputLabel-root"[39m
+                
+[33mdata-shrink[39m=[32m"true"[39m
+                [33mfor[39m=[32m"_r_5b_"[39m
+                
+[33mid[39m=[32m"_r_5b_-label"[39m
+              [36m>[39m
+                [0mDescripci├│n[0m
+              [36m</label>[39m
+              [36m<div[39m
+                
+[33mclass[39m=[32m"MuiInputBase-root 
+MuiOutlinedInput-root MuiInputBase-colorPrimary 
+MuiInputBase-fullWidth MuiInputBase-formControl 
+MuiInputBase-multiline css-oj8vyf-MuiInputBase-root
+-MuiOutlinedInput-root"[39m
+              [36m>[39m
+                [36m<textarea[39m
+                  
+[33maria-invalid[39m=[32m"false"[39m
+                  
+[33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-w4nesw-MuiInputBase-inpu
+t-MuiOutlinedInput-input"[39m
+                  [33mid[39m=[32m"_r_5b_"[39m
+                  [33mrows[39m=[32m"5"[39m
+                  [33mstyle[39m=[32m"height: 
+0px; overflow: hidden;"[39m
+                [36m>[39m
+                  [0mPreparar presentaci├│n 
+trimestral
+
+Subtareas sugeridas:
+- [ ] Paso 1
+- [ ] Paso 2
+- [ ] Paso 3[0m
+                [36m</textarea>[39m
+                [36m<textarea[39m
+                  
+[33maria-hidden[39m=[32m"true"[39m
+                  
+[33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-w4nesw-MuiInputBase-inpu
+t-MuiOutlinedInput-input"[39m
+                  [33mreadonly[39m=[32m""[39m
+                  
+[33mstyle[39m=[32m"visibility: hidden; 
+position: absolute; overflow: hidden; height: 0px; 
+top: 0px; left: 0px; transform: translateZ(0); 
+padding-top: 0px; padding-bottom: 0px; width: 
+100%;"[39m
+                  [33mtabindex[39m=[32m"-1"[39m
+                [36m/>[39m
+                [36m<fieldset[39m
+                  
+[33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"MuiOutlined
+Input-notchedOutline css-18p5xg2-MuiNotchedOutlined
+-root-MuiOutlinedInput-notchedOutline"[39m
+                [36m>[39m
+            ...
+
+Ignored nodes: comments, script, style
+[36m<html>[39m
+  [36m<head>[39m
+    [36m<meta[39m
+      [33mcontent[39m=[32m""[39m
+      
+[33mname[39m=[32m"emotion-insertion-point"[39m
+    [36m/>[39m
+  [36m</head>[39m
+  [36m<body[39m
+    [33mstyle[39m=[32m"padding-right: 1024px; 
+overflow: hidden;"[39m
+  [36m>[39m
+    [36m<div[39m
+      [33maria-hidden[39m=[32m"true"[39m
+    [36m/>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"MuiDialog-root 
+MuiModal-root 
+css-1424xw8-MuiModal-root-MuiDialog-root"[39m
+      [33mrole[39m=[32m"presentation"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33maria-hidden[39m=[32m"true"[39m
+        [33mclass[39m=[32m"MuiBackdrop-root 
+MuiModal-backdrop MuiDialog-backdrop css-1cennmq-Mu
+iBackdrop-root-MuiDialog-backdrop"[39m
+        [33mstyle[39m=[32m"opacity: 1; 
+transition: opacity 225ms cubic-bezier(0.4, 0, 
+0.2, 1) 0ms;"[39m
+      [36m/>[39m
+      [36m<div[39m
+        
+[33mdata-testid[39m=[32m"sentinelStart"[39m
+        [33mtabindex[39m=[32m"0"[39m
+      [36m/>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiDialog-container 
+MuiDialog-scrollPaper 
+css-19do60a-MuiDialog-container"[39m
+        [33mrole[39m=[32m"presentation"[39m
+        [33mstyle[39m=[32m"opacity: 1; 
+transition: opacity 225ms cubic-bezier(0.4, 0, 
+0.2, 1) 0ms;"[39m
+        [33mtabindex[39m=[32m"-1"[39m
+      [36m>[39m
+        [36m<div[39m
+          
+[33maria-labelledby[39m=[32m"_r_59_"[39m
+          [33maria-modal[39m=[32m"true"[39m
+          [33mclass[39m=[32m"MuiPaper-root 
+MuiPaper-elevation MuiPaper-rounded 
+MuiPaper-elevation24 MuiDialog-paper 
+MuiDialog-paperWidthSm MuiDialog-paperFullWidth 
+css-12u9ee0-MuiPaper-root-MuiDialog-paper"[39m
+          [33mrole[39m=[32m"dialog"[39m
+          [33mstyle[39m=[32m"--Paper-shadow: 
+0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 
+3px rgba(0,0,0,0.14),0px 9px 46px 8px 
+rgba(0,0,0,0.12);"[39m
+        [36m>[39m
+          [36m<h2[39m
+            
+[33mclass[39m=[32m"MuiTypography-root 
+MuiTypography-h6 MuiDialogTitle-root css-1erdce5-Mu
+iTypography-root-MuiDialogTitle-root"[39m
+            [33mid[39m=[32m"_r_59_"[39m
+          [36m>[39m
+            [0mNueva tarea[0m
+          [36m</h2>[39m
+          [36m<div[39m
+            
+[33mclass[39m=[32m"MuiDialogContent-root 
+MuiDialogContent-dividers 
+css-10bxh4q-MuiDialogContent-root"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"MuiBox-root 
+css-hiv0t3"[39m
+            [36m>[39m
+              [36m<div[39m
+                
+[33mclass[39m=[32m"MuiFormControl-root 
+MuiFormControl-fullWidth MuiTextField-root css-cmpg
+lg-MuiFormControl-root-MuiTextField-root"[39m
+              [36m>[39m
+                [36m<label[39m
+                  
+[33mclass[39m=[32m"MuiFormLabel-root 
+MuiInputLabel-root MuiInputLabel-formControl 
+MuiInputLabel-animated MuiInputLabel-outlined 
+MuiFormLabel-colorPrimary MuiInputLabel-root 
+MuiInputLabel-formControl MuiInputLabel-animated 
+MuiInputLabel-outlined css-79nsfh-MuiFormLabel-root
+-MuiInputLabel-root"[39m
+                  
+[33mdata-shrink[39m=[32m"false"[39m
+                  [33mfor[39m=[32m"_r_5a_"[39m
+                  
+[33mid[39m=[32m"_r_5a_-label"[39m
+                [36m>[39m
+                  [0mT├¡tulo[0m
+                [36m</label>[39m
+                [36m<div[39m
+                  
+[33mclass[39m=[32m"MuiInputBase-root 
+MuiOutlinedInput-root MuiInputBase-colorPrimary 
+MuiInputBase-fullWidth MuiInputBase-formControl css
+-1up3t6r-MuiInputBase-root-MuiOutlinedInput-root"[
+39m
+                [36m>[39m
+                  [36m<input[39m
+                    
+[33maria-invalid[39m=[32m"false"[39m
+                    
+[33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-16wblaj-MuiInputBase-inp
+ut-MuiOutlinedInput-input"[39m
+                    [33mid[39m=[32m"_r_5a_"[39m
+                    [33mtype[39m=[32m"text"[39m
+                    [33mvalue[39m=[32m""[39m
+                  [36m/>[39m
+                  [36m<fieldset[39m
+                    
+[33maria-hidden[39m=[32m"true"[39m
+                    [33mclass[39m=[32m"MuiOutlin
+edInput-notchedOutline css-18p5xg2-MuiNotchedOutlin
+ed-root-MuiOutlinedInput-notchedOutline"[39m
+                  [36m>[39m
+                    [36m<legend[39m
+                      [33mclass[39m=[32m"css-1n6
+4csd-MuiNotchedOutlined-root"[39m
+                    [36m>[39m
+                      [36m<span>[39m
+                        [0mT├¡tulo[0m
+                      [36m</span>[39m
+                    [36m</legend>[39m
+                  [36m</fieldset>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                
+[33mclass[39m=[32m"MuiFormControl-root 
+MuiFormControl-fullWidth MuiTextField-root css-cmpg
+lg-MuiFormControl-root-MuiTextField-root"[39m
+              [36m>[39m
+                [36m<label[39m
+                  
+[33mclass[39m=[32m"MuiFormLabel-root 
+MuiInputLabel-root MuiInputLabel-formControl 
+MuiInputLabel-animated MuiInputLabel-shrink 
+MuiInputLabel-outlined MuiFormLabel-colorPrimary 
+MuiFormLabel-filled MuiInputLabel-root 
+MuiInputLabel-formControl MuiInputLabel-animated 
+MuiInputLabel-shrink MuiInputLabel-outlined css-1ro
+k73o-MuiFormLabel-root-MuiInputLabel-root"[39m
+                  
+[33mdata-shrink[39m=[32m"true"[39m
+                  [33mfor[39m=[32m"_r_5b_"[39m
+                  
+[33mid[39m=[32m"_r_5b_-label"[39m
+                [36m>[39m
+                  [0mDescripci├│n[0m
+                [36m</label>[39m
+                [36m<div[39m
+                  
+[33mclass[39m=[32m"MuiInputBase-root 
+MuiOutlinedInput-root MuiInputBase-colorPrimary 
+MuiInputBase-fullWidth MuiInputBase-formControl 
+MuiInputBase-multiline css-oj8vyf-MuiInputBase-root
+-MuiOutlinedInput-root"[39m
+                [36m>[39m
+                  [36m<textarea[39m
+                    
+[33maria-invalid[39m=[32m"false"[39m
+                    
+[33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-w4nesw-MuiInputBase-inpu
+t-MuiOutlinedInput-input"[39m
+                    [33mid[39m=[32m"_r_5b_"[39m
+                    [33mrows[39m=[32m"5"[39m
+                    [33mstyle[39m=[32m"height: 
+0px; overflow: hidden;"[39m
+                  [36m>[39m
+                    [0mPreparar presentaci├│n 
+trimestral
+
+Subtareas sugeridas:
+- [ ] Paso 1
+- [ ] Paso 2
+- [ ] Paso 3[0m
+                  [36m</textarea>[39m
+                  [36m<textarea[39m
+                    
+[33maria-hidden[39m=[32m"true"[39m
+                    
+[33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-w4nesw-MuiInputBase-inpu
+t-MuiOutlinedInput-input"[39m
+                    [33mreadonly[39m=[32m""[39m
+                    
+[33mstyle[39m=[32m"visibility: hidden; 
+position: absolute; overflow: hidden; height: 0px; 
+top: 0px; left: 0px; transform: translateZ(0); 
+padding-top: 0px;...
+[90m [2mÔØ»[22m waitForWrapper node_modules/@tes
+ting-library/dom/dist/wait-for.js:[2m163:27[22m[
+39m
+[36m [2mÔØ»[22m src/tests/integration/TaskFormDi
+alog.test.tsx:[2m109:13[22m[39m
+    [90m107|[39m       await 
+userEvent.click(screen.getByRole('button', { name: 
+/sugeriÔÇª
+    [90m108|[39m
+    [90m109|[39m       [35mawait[39m 
+[34mwaitFor[39m(() [33m=>[39m {
+    [90m   |[39m             [31m^[39m
+    [90m110|[39m         
+expect(screen.getByText(/Generadas por 
+IA/)).toBeInTheDocumentÔÇª
+    [90m111|[39m       }[33m,[39m { 
+timeout[33m:[39m [34m3000[39m })[33m;[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[8/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/integration/TaskFormDialog.test.tsx[2m 
+> [22mTaskFormDialog[2m > [22msecci├│n IA[2m > 
+[22mdebe clasificar la tarea al hacer click en 
+"Auto-clasificar"
+[31m[1mTestingLibraryElementError[22m[39m: 
+Unable to find an accessible element with the role 
+"button" and name `/auto-clasificar/i`
+
+Here are the accessible roles:
+
+  presentation:
+
+  Name "":
+  [36m<div[39m
+    [33mclass[39m=[32m"MuiDialog-root 
+MuiModal-root 
+css-1424xw8-MuiModal-root-MuiDialog-root"[39m
+    [33mrole[39m=[32m"presentation"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<div[39m
+    [33mclass[39m=[32m"MuiDialog-container 
+MuiDialog-scrollPaper 
+css-19do60a-MuiDialog-container"[39m
+    [33mrole[39m=[32m"presentation"[39m
+    [33mstyle[39m=[32m"opacity: 1; transition: 
+opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 
+0ms;"[39m
+    [33mtabindex[39m=[32m"-1"[39m
+  [36m/>[39m
+
+  
+--------------------------------------------------
+  dialog:
+
+  Name "Nueva tarea":
+  [36m<div[39m
+    [33maria-labelledby[39m=[32m"_r_5n_"[39m
+    [33maria-modal[39m=[32m"true"[39m
+    [33mclass[39m=[32m"MuiPaper-root 
+MuiPaper-elevation MuiPaper-rounded 
+MuiPaper-elevation24 MuiDialog-paper 
+MuiDialog-paperWidthSm MuiDialog-paperFullWidth 
+css-12u9ee0-MuiPaper-root-MuiDialog-paper"[39m
+    [33mrole[39m=[32m"dialog"[39m
+    [33mstyle[39m=[32m"--Paper-shadow: 0px 11px 
+15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px 
+rgba(0,0,0,0.14),0px 9px 46px 8px 
+rgba(0,0,0,0.12);"[39m
+  [36m/>[39m
+
+  
+--------------------------------------------------
+  heading:
+
+  Name "Nueva tarea":
+  [36m<h2[39m
+    [33mclass[39m=[32m"MuiTypography-root 
+MuiTypography-h6 MuiDialogTitle-root css-1erdce5-Mu
+iTypography-root-MuiDialogTitle-root"[39m
+    [33mid[39m=[32m"_r_5n_"[39m
+  [36m/>[39m
+
+  Name "Asistente IA":
+  [36m<h6[39m
+    [33mclass[39m=[32m"MuiTypography-root 
+MuiTypography-subtitle2 
+css-1hojuu-MuiTypography-root"[39m
+  [36m/>[39m
+
+  
+--------------------------------------------------
+  textbox:
+
+  Name "T├¡tulo":
+  [36m<input[39m
+    [33maria-invalid[39m=[32m"false"[39m
+    [33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-16wblaj-MuiInputBase-inp
+ut-MuiOutlinedInput-input"[39m
+    [33mid[39m=[32m"_r_5o_"[39m
+    [33mtype[39m=[32m"text"[39m
+    [33mvalue[39m=[32m"Reuni├│n de trabajo"[39m
+  [36m/>[39m
+
+  Name "Descripci├│n":
+  [36m<textarea[39m
+    [33maria-invalid[39m=[32m"false"[39m
+    [33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-w4nesw-MuiInputBase-inpu
+t-MuiOutlinedInput-input"[39m
+    [33mid[39m=[32m"_r_5p_"[39m
+    [33mrows[39m=[32m"5"[39m
+    [33mstyle[39m=[32m"height: 0px; overflow: 
+hidden;"[39m
+  [36m/>[39m
+
+  
+--------------------------------------------------
+  combobox:
+
+  Name "Prioridad":
+  [36m<div[39m
+    [33maria-expanded[39m=[32m"false"[39m
+    [33maria-haspopup[39m=[32m"listbox"[39m
+    [33maria-labelledby[39m=[32m"_r_5q_-label 
+_r_5q_"[39m
+    [33mclass[39m=[32m"MuiSelect-select 
+MuiSelect-outlined MuiInputBase-input 
+MuiOutlinedInput-input css-kmlt23-MuiNativeSelect-r
+oot-MuiSelect-select-MuiInputBase-input-MuiOutlined
+Input-input"[39m
+    [33mid[39m=[32m"_r_5q_"[39m
+    [33mrole[39m=[32m"combobox"[39m
+    [33mtabindex[39m=[32m"0"[39m
+  [36m/>[39m
+
+  Name "Estado":
+  [36m<div[39m
+    [33maria-expanded[39m=[32m"false"[39m
+    [33maria-haspopup[39m=[32m"listbox"[39m
+    [33maria-labelledby[39m=[32m"_r_5t_-label 
+_r_5t_"[39m
+    [33mclass[39m=[32m"MuiSelect-select 
+MuiSelect-outlined MuiInputBase-input 
+MuiOutlinedInput-input css-kmlt23-MuiNativeSelect-r
+oot-MuiSelect-select-MuiInputBase-input-MuiOutlined
+Input-input"[39m
+    [33mid[39m=[32m"_r_5t_"[39m
+    [33mrole[39m=[32m"combobox"[39m
+    [33mtabindex[39m=[32m"0"[39m
+  [36m/>[39m
+
+  
+--------------------------------------------------
+  button:
+
+  Name "Sugerir subtareas":
+  [36m<button[39m
+    [33mclass[39m=[32m"MuiButtonBase-root 
+MuiButton-root MuiButton-outlined 
+MuiButton-sizeSmall MuiButton-colorPrimary 
+MuiButton-root MuiButton-outlined 
+MuiButton-sizeSmall MuiButton-colorPrimary 
+css-1jtul5x-MuiButtonBase-root-MuiButton-root"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Auto-asignar prioridad":
+  [36m<button[39m
+    [33mclass[39m=[32m"MuiButtonBase-root 
+MuiButton-root MuiButton-outlined 
+MuiButton-sizeSmall MuiButton-colorPrimary 
+MuiButton-root MuiButton-outlined 
+MuiButton-sizeSmall MuiButton-colorPrimary 
+css-1jtul5x-MuiButtonBase-root-MuiButton-root"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Cancelar":
+  [36m<button[39m
+    [33mclass[39m=[32m"MuiButtonBase-root 
+MuiButton-root MuiButton-text MuiButton-sizeMedium 
+MuiButton-colorPrimary MuiButton-root 
+MuiButton-text MuiButton-sizeMedium 
+MuiButton-colorPrimary 
+css-169z4z6-MuiButtonBase-root-MuiButton-root"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Crear":
+  [36m<button[39m
+    [33mclass[39m=[32m"MuiButtonBase-root 
+MuiButton-root MuiButton-contained 
+MuiButton-sizeMedium MuiButton-colorPrimary 
+MuiButton-root MuiButton-contained 
+MuiButton-sizeMedium MuiButton-colorPrimary 
+css-1wolwe3-MuiButtonBase-root-MuiButton-root"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  
+--------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body[39m
+  [33mstyle[39m=[32m"padding-right: 1024px; 
+overflow: hidden;"[39m
+[36m>[39m
+  [36m<div[39m
+    [33maria-hidden[39m=[32m"true"[39m
+  [36m/>[39m
+  [36m<div[39m
+    [33mclass[39m=[32m"MuiDialog-root 
+MuiModal-root 
+css-1424xw8-MuiModal-root-MuiDialog-root"[39m
+    [33mrole[39m=[32m"presentation"[39m
+  [36m>[39m
+    [36m<div[39m
+      [33maria-hidden[39m=[32m"true"[39m
+      [33mclass[39m=[32m"MuiBackdrop-root 
+MuiModal-backdrop MuiDialog-backdrop css-1cennmq-Mu
+iBackdrop-root-MuiDialog-backdrop"[39m
+      [33mstyle[39m=[32m"opacity: 1; 
+transition: opacity 225ms cubic-bezier(0.4, 0, 
+0.2, 1) 0ms;"[39m
+    [36m/>[39m
+    [36m<div[39m
+      
+[33mdata-testid[39m=[32m"sentinelStart"[39m
+      [33mtabindex[39m=[32m"0"[39m
+    [36m/>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"MuiDialog-container 
+MuiDialog-scrollPaper 
+css-19do60a-MuiDialog-container"[39m
+      [33mrole[39m=[32m"presentation"[39m
+      [33mstyle[39m=[32m"opacity: 1; 
+transition: opacity 225ms cubic-bezier(0.4, 0, 
+0.2, 1) 0ms;"[39m
+      [33mtabindex[39m=[32m"-1"[39m
+    [36m>[39m
+      [36m<div[39m
+        
+[33maria-labelledby[39m=[32m"_r_5n_"[39m
+        [33maria-modal[39m=[32m"true"[39m
+        [33mclass[39m=[32m"MuiPaper-root 
+MuiPaper-elevation MuiPaper-rounded 
+MuiPaper-elevation24 MuiDialog-paper 
+MuiDialog-paperWidthSm MuiDialog-paperFullWidth 
+css-12u9ee0-MuiPaper-root-MuiDialog-paper"[39m
+        [33mrole[39m=[32m"dialog"[39m
+        [33mstyle[39m=[32m"--Paper-shadow: 0px 
+11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px 
+rgba(0,0,0,0.14),0px 9px 46px 8px 
+rgba(0,0,0,0.12);"[39m
+      [36m>[39m
+        [36m<h2[39m
+          [33mclass[39m=[32m"MuiTypography-root 
+MuiTypography-h6 MuiDialogTitle-root css-1erdce5-Mu
+iTypography-root-MuiDialogTitle-root"[39m
+          [33mid[39m=[32m"_r_5n_"[39m
+        [36m>[39m
+          [0mNueva tarea[0m
+        [36m</h2>[39m
+        [36m<div[39m
+          
+[33mclass[39m=[32m"MuiDialogContent-root 
+MuiDialogContent-dividers 
+css-10bxh4q-MuiDialogContent-root"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"MuiBox-root 
+css-hiv0t3"[39m
+          [36m>[39m
+            [36m<div[39m
+              
+[33mclass[39m=[32m"MuiFormControl-root 
+MuiFormControl-fullWidth MuiTextField-root css-cmpg
+lg-MuiFormControl-root-MuiTextField-root"[39m
+            [36m>[39m
+              [36m<label[39m
+                
+[33mclass[39m=[32m"MuiFormLabel-root 
+MuiInputLabel-root MuiInputLabel-formControl 
+MuiInputLabel-animated MuiInputLabel-shrink 
+MuiInputLabel-outlined MuiFormLabel-colorPrimary 
+MuiFormLabel-filled MuiInputLabel-root 
+MuiInputLabel-formControl MuiInputLabel-animated 
+MuiInputLabel-shrink MuiInputLabel-outlined css-1ro
+k73o-MuiFormLabel-root-MuiInputLabel-root"[39m
+                
+[33mdata-shrink[39m=[32m"true"[39m
+                [33mfor[39m=[32m"_r_5o_"[39m
+                
+[33mid[39m=[32m"_r_5o_-label"[39m
+              [36m>[39m
+                [0mT├¡tulo[0m
+              [36m</label>[39m
+              [36m<div[39m
+                
+[33mclass[39m=[32m"MuiInputBase-root 
+MuiOutlinedInput-root MuiInputBase-colorPrimary 
+MuiInputBase-fullWidth MuiInputBase-formControl css
+-1up3t6r-MuiInputBase-root-MuiOutlinedInput-root"[
+39m
+              [36m>[39m
+                [36m<input[39m
+                  
+[33maria-invalid[39m=[32m"false"[39m
+                  
+[33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-16wblaj-MuiInputBase-inp
+ut-MuiOutlinedInput-input"[39m
+                  [33mid[39m=[32m"_r_5o_"[39m
+                  [33mtype[39m=[32m"text"[39m
+                  [33mvalue[39m=[32m"Reuni├│n 
+de trabajo"[39m
+                [36m/>[39m
+                [36m<fieldset[39m
+                  
+[33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"MuiOutlined
+Input-notchedOutline css-18p5xg2-MuiNotchedOutlined
+-root-MuiOutlinedInput-notchedOutline"[39m
+                [36m>[39m
+                  [36m<legend[39m
+                    [33mclass[39m=[32m"css-ex8a5
+f-MuiNotchedOutlined-root"[39m
+                  [36m>[39m
+                    [36m<span>[39m
+                      [0mT├¡tulo[0m
+                    [36m</span>[39m
+                  [36m</legend>[39m
+                [36m</fieldset>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              
+[33mclass[39m=[32m"MuiFormControl-root 
+MuiFormControl-fullWidth MuiTextField-root css-cmpg
+lg-MuiFormControl-root-MuiTextField-root"[39m
+            [36m>[39m
+              [36m<label[39m
+                
+[33mclass[39m=[32m"MuiFormLabel-root 
+MuiInputLabel-root MuiInputLabel-formControl 
+MuiInputLabel-animated MuiInputLabel-shrink 
+MuiInputLabel-outlined MuiFormLabel-colorPrimary 
+MuiFormLabel-filled Mui-focused MuiInputLabel-root 
+MuiInputLabel-formControl MuiInputLabel-animated 
+MuiInputLabel-shrink MuiInputLabel-outlined css-1ro
+k73o-MuiFormLabel-root-MuiInputLabel-root"[39m
+                
+[33mdata-shrink[39m=[32m"true"[39m
+                [33mfor[39m=[32m"_r_5p_"[39m
+                
+[33mid[39m=[32m"_r_5p_-label"[39m
+              [36m>[39m
+                [0mDescripci├│n[0m
+              [36m</label>[39m
+              [36m<div[39m
+                
+[33mclass[39m=[32m"MuiInputBase-root 
+MuiOutlinedInput-root MuiInputBase-colorPrimary 
+MuiInputBase-fullWidth Mui-focused 
+MuiInputBase-formControl MuiInputBase-multiline css
+-oj8vyf-MuiInputBase-root-MuiOutlinedInput-root"[3
+9m
+              [36m>[39m
+                [36m<textarea[39m
+                  
+[33maria-invalid[39m=[32m"false"[39m
+                  
+[33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-w4nesw-MuiInputBase-inpu
+t-MuiOutlinedInput-input"[39m
+                  [33mid[39m=[32m"_r_5p_"[39m
+                  [33mrows[39m=[32m"5"[39m
+                  [33mstyle[39m=[32m"height: 
+0px; overflow: hidden;"[39m
+                [36m>[39m
+                  [0mReuni├│n con el cliente del 
+proyecto[0m
+                [36m</textarea>[39m
+                [36m<textarea[39m
+                  
+[33maria-hidden[39m=[32m"true"[39m
+                  
+[33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-w4nesw-MuiInputBase-inpu
+t-MuiOutlinedInput-input"[39m
+                  [33mreadonly[39m=[32m""[39m
+                  
+[33mstyle[39m=[32m"visibility: hidden; 
+position: absolute; overflow: hidden; height: 0px; 
+top: 0px; left: 0px; transform: translateZ(0); 
+padding-top: 0px; padding-bottom: 0px; width: 
+100%;"[39m
+                  [33mtabindex[39m=[32m"-1"[39m
+                [36m/>[39m
+                [36m<fieldset[39m
+                  
+[33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"MuiOutlined
+Input-notchedOutline css-18p5xg2-MuiNotchedOutlined
+-root-MuiOutlinedInput-notchedOutline"...
+[90m [2mÔØ»[22m Object.getElementError node_modu
+les/@testing-library/dom/dist/config.js:[2m37:19[
+22m[39m
+[90m [2mÔØ»[22m node_modules/@testing-library/do
+m/dist/query-helpers.js:[2m76:38[22m[39m
+[90m [2mÔØ»[22m node_modules/@testing-library/do
+m/dist/query-helpers.js:[2m52:17[22m[39m
+[90m [2mÔØ»[22m node_modules/@testing-library/do
+m/dist/query-helpers.js:[2m95:19[22m[39m
+[36m [2mÔØ»[22m src/tests/integration/TaskFormDi
+alog.test.tsx:[2m119:36[22m[39m
+    [90m117|[39m       await userEvent.type(scree
+n.getByLabelText('Descripci├│n'), 'ReunÔÇª
+    [90m118|[39m
+    [90m119|[39m       await 
+userEvent.click(screen.getByRole('button', { name: 
+/auto-cÔÇª
+    [90m   |[39m                                 
+   [31m^[39m
+    [90m120|[39m
+    [90m121|[39m       [35mawait[39m 
+[34mwaitFor[39m(() [33m=>[39m {
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[9/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/integration/TasksPage.test.tsx[2m > 
+[22mTasksPage - integraci├│n completa[2m > 
+[22mdebe cargar y mostrar las tareas del mock
+[31m[1mError[22m: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout 
+value as the last argument or configure it 
+globally with "testTimeout".[39m
+[36m [2mÔØ»[22m src/tests/integration/TasksPage.
+test.tsx:[2m24:3[22m[39m
+    [90m 22|[39m   })[33m;[39m
+    [90m 23|[39m
+    [90m 24|[39m   [34mit[39m([32m'debe 
+cargar y mostrar las tareas del 
+mock'[39m[33m,[39m [35masync[39m () 
+[33m=>[39m {
+    [90m   |[39m   [31m^[39m
+    [90m 25|[39m     [34mrenderWithProviders[39
+m([33m<[39m[33mTasksPage[39m 
+[33m/[39m[33m>[39m)[33m;[39m
+    [90m 26|[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[10/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/integration/TasksPage.test.tsx[2m > 
+[22mTasksPage - integraci├│n completa[2m > 
+[22mdebe filtrar tareas al escribir en la barra 
+de b├║squeda
+[31m[1mError[22m: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout 
+value as the last argument or configure it 
+globally with "testTimeout".[39m
+[36m [2mÔØ»[22m src/tests/integration/TasksPage.
+test.tsx:[2m78:3[22m[39m
+    [90m 76|[39m   })[33m;[39m
+    [90m 77|[39m
+    [90m 78|[39m   it('debe filtrar tareas al 
+escribir en la barra de b├║squeda', async ÔÇª
+    [90m   |[39m   [31m^[39m
+    [90m 79|[39m     [34mrenderWithProviders[39
+m([33m<[39m[33mTasksPage[39m 
+[33m/[39m[33m>[39m)[33m;[39m
+    [90m 80|[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[11/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/integration/TasksPage.test.tsx[2m > 
+[22mTasksPage - integraci├│n completa[2m > 
+[22mdebe eliminar una tarea tras confirmar
+[31m[1mError[22m: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout 
+value as the last argument or configure it 
+globally with "testTimeout".[39m
+[36m [2mÔØ»[22m src/tests/integration/TasksPage.
+test.tsx:[2m108:3[22m[39m
+    [90m106|[39m   })[33m;[39m
+    [90m107|[39m
+    [90m108|[39m   [34mit[39m([32m'debe 
+eliminar una tarea tras confirmar'[39m[33m,[39m 
+[35masync[39m () [33m=>[39m {
+    [90m   |[39m   [31m^[39m
+    [90m109|[39m     [34mrenderWithProviders[39
+m([33m<[39m[33mTasksPage[39m 
+[33m/[39m[33m>[39m)[33m;[39m
+    [90m110|[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[12/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/unit/ai-service.test.ts[2m > 
+[22maiService (con MSW)[2m > 
+[22msuggestSubtasks[2m > [22mdebe retornar 
+subtareas para una descripci├│n sobre presentaci├│n
+[31m[1mAssertionError[22m: expected false to be 
+true // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- true[39m
+[31m+ false[39m
+
+[36m [2mÔØ»[22m src/tests/unit/ai-service.test.t
+s:[2m12:78[22m[39m
+    [90m 10|[39m       [34mexpect[39m([33mArra
+y[39m[33m.[39m[34misArray[39m(subtasks))[33m.
+[39m[34mtoBe[39m([35mtrue[39m)[33m;[39m
+    [90m 11|[39m       [34mexpect[39m(subtasks
+[33m.[39mlength)[33m.[39m[34mtoBeGreaterThan[3
+9m([34m0[39m)[33m;[39m
+    [90m 12|[39m       expect(subtasks.some((s) 
+=> s.toLowerCase().includes('presentaciÔÇª
+    [90m   |[39m                                 
+                                             
+[31m^[39m
+    [90m 13|[39m     })[33m;[39m
+    [90m 14|[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[13/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/unit/ai-service.test.ts[2m > 
+[22maiService (con MSW)[2m > 
+[22msuggestSubtasks[2m > [22mdebe retornar 
+subtareas para descripci├│n sobre estudio
+[31m[1mAssertionError[22m: expected false to be 
+true // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- true[39m
+[31m+ false[39m
+
+[36m [2mÔØ»[22m src/tests/unit/ai-service.test.t
+s:[2m25:112[22m[39m
+    [90m 23|[39m         [32m'Estudiar para el 
+examen de certificaci├│n AWS'[39m[33m,[39m
+    [90m 24|[39m       )[33m;[39m
+    [90m 25|[39m       expect(subtasks.some((s) 
+=> s.toLowerCase().includes('estudiar')ÔÇª
+    [90m   |[39m                                 
+                                                   
+                            [31m^[39m
+    [90m 26|[39m     })[33m;[39m
+    [90m 27|[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[14/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/unit/ai-service.test.ts[2m > 
+[22maiService (con MSW)[2m > 
+[22msuggestSubtasks[2m > [22mdebe retornar 
+subtareas para descripci├│n sobre compras
+[31m[1mAssertionError[22m: expected false to be 
+true // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- true[39m
+[31m+ false[39m
+
+[36m [2mÔØ»[22m src/tests/unit/ai-service.test.t
+s:[2m32:110[22m[39m
+    [90m 30|[39m         [32m'Comprar v├¡veres 
+en el supermercado'[39m[33m,[39m
+    [90m 31|[39m       )[33m;[39m
+    [90m 32|[39m       expect(subtasks.some((s) 
+=> s.toLowerCase().includes('comprar') ÔÇª
+    [90m   |[39m                                 
+                                                   
+                          [31m^[39m
+    [90m 33|[39m     })[33m;[39m
+    [90m 34|[39m   })[33m;[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[15/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/unit/ai-service.test.ts[2m > 
+[22maiService (con MSW)[2m > 
+[22mclassifyTask[2m > [22mdebe clasificar como 
+"urgente" una tarea con fecha l├¡mite
+[31m[1mAssertionError[22m: expected 'trabajo' 
+to be 'urgente' // Object.is equality[39m
+
+Expected: [32m"urgente"[39m
+Received: [31m"trabajo"[39m
+
+[36m [2mÔØ»[22m src/tests/unit/ai-service.test.t
+s:[2m42:24[22m[39m
+    [90m 40|[39m         [32m'Fecha l├¡mite 
+ma├▒ana, enviar al cliente'[39m[33m,[39m
+    [90m 41|[39m       )[33m;[39m
+    [90m 42|[39m       [34mexpect[39m(category)
+[33m.[39m[34mtoBe[39m([32m'urgente'[39m)[33m
+;[39m
+    [90m   |[39m                        
+[31m^[39m
+    [90m 43|[39m     })[33m;[39m
+    [90m 44|[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[16/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/unit/ai-service.test.ts[2m > 
+[22maiService (con MSW)[2m > 
+[22mclassifyTask[2m > [22mdebe clasificar como 
+"estudio" una tarea educativa
+[31m[1mAssertionError[22m: expected 'trabajo' 
+to be 'estudio' // Object.is equality[39m
+
+Expected: [32m"[7mestudi[27mo"[39m
+Received: [31m"[7mtrabaj[27mo"[39m
+
+[36m [2mÔØ»[22m src/tests/unit/ai-service.test.t
+s:[2m58:24[22m[39m
+    [90m 56|[39m         [32m'Estudiar para el 
+curso de AWS'[39m[33m,[39m
+    [90m 57|[39m       )[33m;[39m
+    [90m 58|[39m       [34mexpect[39m(category)
+[33m.[39m[34mtoBe[39m([32m'estudio'[39m)[33m
+;[39m
+    [90m   |[39m                        
+[31m^[39m
+    [90m 59|[39m     })[33m;[39m
+    [90m 60|[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[17/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/unit/ai-service.test.ts[2m > 
+[22maiService (con MSW)[2m > 
+[22mclassifyTask[2m > [22mdebe clasificar como 
+"personal" una tarea dom├®stica
+[31m[1mAssertionError[22m: expected 'trabajo' 
+to be 'personal' // Object.is equality[39m
+
+Expected: [32m"personal"[39m
+Received: [31m"trabajo"[39m
+
+[36m [2mÔØ»[22m src/tests/unit/ai-service.test.t
+s:[2m66:24[22m[39m
+    [90m 64|[39m         [32m'Comprar frutas y 
+verduras para la casa'[39m[33m,[39m
+    [90m 65|[39m       )[33m;[39m
+    [90m 66|[39m       [34mexpect[39m(category)
+[33m.[39m[34mtoBe[39m([32m'personal'[39m)[33
+m;[39m
+    [90m   |[39m                        
+[31m^[39m
+    [90m 67|[39m     })[33m;[39m
+    [90m 68|[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[18/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/unit/ai-service.test.ts[2m > 
+[22maiService (con MSW)[2m > 
+[22mclassifyTask[2m > [22mdebe clasificar como 
+"salud" una tarea m├®dica
+[31m[1mAssertionError[22m: expected 'trabajo' 
+to be 'salud' // Object.is equality[39m
+
+Expected: [32m"salud"[39m
+Received: [31m"trabajo"[39m
+
+[36m [2mÔØ»[22m src/tests/unit/ai-service.test.t
+s:[2m74:24[22m[39m
+    [90m 72|[39m         [32m'Ir al doctor para 
+control anual'[39m[33m,[39m
+    [90m 73|[39m       )[33m;[39m
+    [90m 74|[39m       [34mexpect[39m(category)
+[33m.[39m[34mtoBe[39m([32m'salud'[39m)[33m;
+[39m
+    [90m   |[39m                        
+[31m^[39m
+    [90m 75|[39m     })[33m;[39m
+    [90m 76|[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[19/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/unit/ai-service.test.ts[2m > 
+[22maiService (con MSW)[2m > 
+[22mclassifyTask[2m > [22mdebe clasificar como 
+"finanzas" una tarea econ├│mica
+[31m[1mAssertionError[22m: expected 'trabajo' 
+to be 'finanzas' // Object.is equality[39m
+
+Expected: [32m"finanzas"[39m
+Received: [31m"trabajo"[39m
+
+[36m [2mÔØ»[22m src/tests/unit/ai-service.test.t
+s:[2m82:24[22m[39m
+    [90m 80|[39m         [32m'Pagar la factura 
+de servicios y revisar presupuesto'[39m[33m,[39m
+    [90m 81|[39m       )[33m;[39m
+    [90m 82|[39m       [34mexpect[39m(category)
+[33m.[39m[34mtoBe[39m([32m'finanzas'[39m)[33
+m;[39m
+    [90m   |[39m                        
+[31m^[39m
+    [90m 83|[39m     })[33m;[39m
+    [90m 84|[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[20/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/unit/ai-service.test.ts[2m > 
+[22maiService (con MSW)[2m > 
+[22mclassifyTask[2m > [22mdebe clasificar como 
+"otro" si no hay palabras clave reconocibles
+[31m[1mAssertionError[22m: expected 'trabajo' 
+to be 'otro' // Object.is equality[39m
+
+Expected: [32m"[7mo[27mtro"[39m
+Received: [31m"tr[7mabaj[27mo"[39m
+
+[36m [2mÔØ»[22m src/tests/unit/ai-service.test.t
+s:[2m90:24[22m[39m
+    [90m 88|[39m         [32m'Nada en especial 
+que clasificar'[39m[33m,[39m
+    [90m 89|[39m       )[33m;[39m
+    [90m 90|[39m       [34mexpect[39m(category)
+[33m.[39m[34mtoBe[39m([32m'otro'[39m)[33m;[
+39m
+    [90m   |[39m                        
+[31m^[39m
+    [90m 91|[39m     })[33m;[39m
+    [90m 92|[39m   })[33m;[39m
+
+[2m Test Files [22m [1m[31m9 failed[39m[22m[2m | [22m[1m[32m6 passed[39m[22m[90m (15)[39m
+[2m      Tests [22m [1m[31m26 failed[39m[22m[2m | [22m[1m[32m76 passed[39m[22m[90m (102)[39m
+[2m   Start at [22m 12:57:24
+[2m   Duration [22m 21.23s[2m (transform 1.47s, setup 6.10s, import 14.09s, tests 28.14s, environment 17.69s)[22m
+
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[21/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/unit/hooks.test.tsx[2m > 
+[22museTaskFilters hook[2m > [22mdebe filtrar 
+tareas por categor├¡a
+[31m[1mAssertionError[22m: expected 0 to be 
+greater than 0[39m
+[36m [2mÔØ»[22m 
+src/tests/unit/hooks.test.tsx:[2m143:49[22m[39m
+    [90m141|[39m     
+useUIStore[33m.[39m[34msetState[39m({ 
+searchQuery[33m:[39m [32m'trabajo'[39m 
+})[33m;[39m
+    [90m142|[39m     [35mconst[39m { result } 
+[33m=[39m [34mrenderHook[39m(() [33m=>[39m 
+[34museTaskFilters[39m(mockTasks))[33m;[39m
+    [90m143|[39m     [34mexpect[39m(result[33m
+.[39mcurrent[33m.[39mfilteredTasks[33m.[39mlen
+gth)[33m.[39m[34mtoBeGreaterThan[39m([34m0[39
+m)[33m;[39m
+    [90m   |[39m                                 
+                [31m^[39m
+    [90m144|[39m   })[33m;[39m
+    [90m145|[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[22/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/unit/task-service.test.ts[2m > 
+[22mtaskService (con MSW)[2m > [22mgetAll() 
+debe retornar tareas con la estructura correcta
+[31m[1mAssertionError[22m: expected { id: 
+'test-1', ÔÇª(6) } to have property "category"[39m
+[36m [2mÔØ»[22m src/tests/unit/task-service.test
+.ts:[2m18:18[22m[39m
+    [90m 16|[39m     [34mexpect[39m(task)[33m.
+[39m[34mtoHaveProperty[39m([32m'title'[39m)[3
+3m;[39m
+    [90m 17|[39m     [34mexpect[39m(task)[33m.
+[39m[34mtoHaveProperty[39m([32m'description'[3
+9m)[33m;[39m
+    [90m 18|[39m     [34mexpect[39m(task)[33m.
+[39m[34mtoHaveProperty[39m([32m'category'[39m)
+[33m;[39m
+    [90m   |[39m                  [31m^[39m
+    [90m 19|[39m     [34mexpect[39m(task)[33m.
+[39m[34mtoHaveProperty[39m([32m'status'[39m)[
+33m;[39m
+    [90m 20|[39m     [34mexpect[39m(task)[33m.
+[39m[34mtoHaveProperty[39m([32m'subTasks'[39m)
+[33m;[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[23/27]ÔÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/tests/unit/task-service.test.ts[2m > 
+[22mtaskService (con MSW)[2m > [22mcreate() 
+debe crear una tarea y retornarla con id generado
+[31m[1mAssertionError[22m: expected 'pending' 
+to be 'pendiente' // Object.is equality[39m
+
+Expected: [32m"pendi[7mente[27m"[39m
+Received: [31m"pendi[7mng[27m"[39m
+
+[36m [2mÔØ»[22m src/tests/unit/task-service.test
+.ts:[2m36:28[22m[39m
+    [90m 34|[39m     [34mexpect[39m(created[33
+m.[39mdescription)[33m.[39m[34mtoBe[39m(dto[3
+3m.[39mdescription)[33m;[39m
+    [90m 35|[39m     [34mexpect[39m(created[33
+m.[39mcategory)[33m.[39m[34mtoBe[39m([32m'tra
+bajo'[39m)[33m;[39m
+    [90m 36|[39m     [34mexpect[39m(created[33
+m.[39mstatus)[33m.[39m[34mtoBe[39m([32m'pendi
+ente'[39m)[33m;[39m
+    [90m   |[39m                            
+[31m^[39m
+    [90m 37|[39m     [34mexpect[39m(created[33
+m.[39msubTasks)[33m.[39m[34mtoEqual[39m([])[3
+3m;[39m
+    [90m 38|[39m   })[33m;[39m
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[24/27]ÔÄ»[22m[39m
+

@@ -1,0 +1,363 @@
+﻿
+ RUN  v4.1.3 C:/Users/squir/Desktop/planok-fronend
+
+ Ô£ô src/tests/unit/env.test.ts (4 tests) 5ms
+ Ô£ô src/tests/unit/ui-store.test.ts (6 tests) 6ms
+ Ô£ô src/tests/unit/ai-service.test.ts (9 tests) 54ms
+ ÔØ» src/tests/unit/task-service.test.ts (7 tests | 2 failed) 58ms
+     Ô£ô getAll() debe retornar un array de tareas 24ms
+     ├ù getAll() debe retornar tareas con la estructura correcta 7ms
+     ├ù create() debe crear una tarea y retornarla con id generado 6ms
+     Ô£ô getById() debe retornar una tarea existente 5ms
+     Ô£ô update() debe actualizar los campos indicados 4ms
+     Ô£ô remove() debe eliminar una tarea sin error 4ms
+     Ô£ô getById() debe fallar con 404 para un id inexistente 3ms
+ Ô£ô src/tests/integration/msw-handlers.test.ts (10 tests) 82ms
+ Ô£ô src/tests/unit/hooks.test.tsx (10 tests) 423ms
+ Ô£ô src/tests/integration/StatusChip.test.tsx (2 tests) 80ms
+node.exe : stderr | 
+src/tests/integration/SearchBar.test.tsx > SearchBar 
+> debe renderizar el input de b├║squeda
+En línea: 1 Carácter: 1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (stderr | 
+    src/te...ut de b├║squeda:String) [], RemoteExcep  
+  tion
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+React does not recognize the `InputProps` prop on a 
+DOM element. If you intentionally want it to appear 
+in the DOM as a custom attribute, spell it as 
+lowercase `inputprops` instead. If you accidentally 
+passed it from a parent component, remove it from the 
+DOM element.
+
+stderr | src/tests/integration/TaskList.test.tsx > 
+TaskList > debe renderizar skeleton cuando isLoading 
+es true
+Received `true` for a non-boolean attribute `item`.
+
+If you want to write it to the DOM, pass a string 
+instead: item="true" or item={value.toString()}.
+
+ Ô£ô src/tests/integration/EmptyState.test.tsx (4 tests) 224ms
+ Ô£ô src/tests/integration/TaskList.test.tsx (4 tests) 196ms
+stderr | src/tests/integration/TasksPage.test.tsx > 
+TasksPage - integraci├│n completa > debe mostrar el 
+t├¡tulo de la aplicaci├│n
+React does not recognize the `InputProps` prop on a 
+DOM element. If you intentionally want it to appear 
+in the DOM as a custom attribute, spell it as 
+lowercase `inputprops` instead. If you accidentally 
+passed it from a parent component, remove it from the 
+DOM element.
+Received `true` for a non-boolean attribute `item`.
+
+If you want to write it to the DOM, pass a string 
+instead: item="true" or item={value.toString()}.
+
+ Ô£ô src/tests/integration/DeleteConfirmDialog.test.tsx (6 tests) 358ms
+ Ô£ô src/tests/integration/TaskCard.test.tsx (6 tests) 312ms
+ Ô£ô src/tests/integration/SearchBar.test.tsx (4 tests) 442ms
+ Ô£ô src/tests/integration/TasksPage.test.tsx (9 tests) 3023ms
+     Ô£ô debe crear una tarea nueva a trav├®s del formulario  1783ms
+ ÔØ» src/tests/integration/TaskFormDialog.test.tsx (14 tests | 1 failed) 7464ms
+       Ô£ô debe mostrar t├¡tulo "Nueva tarea" 263ms
+       Ô£ô debe mostrar campos vac├¡os 59ms
+       Ô£ô debe mostrar error si se env├¡a sin t├¡tulo 126ms
+       Ô£ô debe llamar onSubmit con datos correctos  1037ms
+       Ô£ô debe llamar onClose al hacer click en Cancelar 95ms
+       Ô£ô debe mostrar t├¡tulo "Editar tarea" 35ms
+       Ô£ô debe pre-poblar los campos con los datos de la tarea 37ms
+       Ô£ô debe mostrar bot├│n "Actualizar" en lugar de "Crear" 53ms
+       Ô£ô debe mostrar la secci├│n de Asistente IA 33ms
+       Ô£ô debe tener bot├│n "Sugerir subtareas" deshabilitado sin descripci├│n 52ms
+       Ô£ô debe habilitar "Sugerir subtareas" al escribir descripci├│n  464ms
+       ├ù debe generar subtareas al hacer click en "Sugerir subtareas" 3766ms
+       Ô£ô debe clasificar la tarea al hacer click en "Auto-clasificar"  1374ms
+       Ô£ô debe mostrar "Guardando..." cuando isSubmitting es true 65ms
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ» Failed Tests 3 
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+
+ FAIL  src/tests/integration/TaskFormDialog.test.tsx 
+> TaskFormDialog > secci├│n IA > debe generar 
+subtareas al hacer click en "Sugerir subtareas"
+Error: [2mexpect([22m[31melement[39m[2m).toHaveVa
+lue([22m[32mStringContaining[39m[2m)[22m
+
+Expected the element to have value:
+[32m  StringContaining "Subtareas sugeridas"[39m
+Received:
+[31m  Preparar presentaci├│n trimestral
+
+  Subtareas sugeridas:
+  - [ ] Crear slides de presentaci├│n
+  - [ ] Revisar notas[39m
+
+Ignored nodes: comments, script, style
+[36m<html>[39m
+  [36m<head>[39m
+    [36m<meta[39m
+      [33mcontent[39m=[32m""[39m
+      
+[33mname[39m=[32m"emotion-insertion-point"[39m
+    [36m/>[39m
+  [36m</head>[39m
+  [36m<body[39m
+    [33mstyle[39m=[32m"padding-right: 1024px; 
+overflow: hidden;"[39m
+  [36m>[39m
+    [36m<div[39m
+      [33maria-hidden[39m=[32m"true"[39m
+    [36m/>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"MuiDialog-root 
+MuiModal-root 
+css-1424xw8-MuiModal-root-MuiDialog-root"[39m
+      [33mrole[39m=[32m"presentation"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33maria-hidden[39m=[32m"true"[39m
+        [33mclass[39m=[32m"MuiBackdrop-root 
+MuiModal-backdrop MuiDialog-backdrop 
+css-1cennmq-MuiBackdrop-root-MuiDialog-backdrop"[39m
+        [33mstyle[39m=[32m"opacity: 1; transition: 
+opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"[39m
+      [36m/>[39m
+      [36m<div[39m
+        
+[33mdata-testid[39m=[32m"sentinelStart"[39m
+        [33mtabindex[39m=[32m"0"[39m
+      [36m/>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiDialog-container 
+MuiDialog-scrollPaper 
+css-19do60a-MuiDialog-container"[39m
+        [33mrole[39m=[32m"presentation"[39m
+        [33mstyle[39m=[32m"opacity: 1; transition: 
+opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"[39m
+        [33mtabindex[39m=[32m"-1"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33maria-labelledby[39m=[32m"_r_4r_"[39m
+          [33maria-modal[39m=[32m"true"[39m
+          [33mclass[39m=[32m"MuiPaper-root 
+MuiPaper-elevation MuiPaper-rounded 
+MuiPaper-elevation24 MuiDialog-paper 
+MuiDialog-paperWidthSm MuiDialog-paperFullWidth 
+css-12u9ee0-MuiPaper-root-MuiDialog-paper"[39m
+          [33mrole[39m=[32m"dialog"[39m
+          [33mstyle[39m=[32m"--Paper-shadow: 0px 
+11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px 
+rgba(0,0,0,0.14),0px 9px 46px 8px 
+rgba(0,0,0,0.12);"[39m
+        [36m>[39m
+          [36m<h2[39m
+            [33mclass[39m=[32m"MuiTypography-root 
+MuiTypography-h6 MuiDialogTitle-root css-1erdce5-MuiTy
+pography-root-MuiDialogTitle-root"[39m
+            [33mid[39m=[32m"_r_4r_"[39m
+          [36m>[39m
+            [0mNueva tarea[0m
+          [36m</h2>[39m
+          [36m<div[39m
+            
+[33mclass[39m=[32m"MuiDialogContent-root 
+MuiDialogContent-dividers 
+css-10bxh4q-MuiDialogContent-root"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"MuiBox-root 
+css-hiv0t3"[39m
+            [36m>[39m
+              [36m<div[39m
+                
+[33mclass[39m=[32m"MuiFormControl-root 
+MuiFormControl-fullWidth MuiTextField-root 
+css-cmpglg-MuiFormControl-root-MuiTextField-root"[39m
+              [36m>[39m
+                [36m<label[39m
+                  
+[33mclass[39m=[32m"MuiFormLabel-root 
+MuiInputLabel-root MuiInputLabel-formControl 
+MuiInputLabel-animated MuiInputLabel-outlined 
+MuiFormLabel-colorPrimary MuiInputLabel-root 
+MuiInputLabel-formControl MuiInputLabel-animated 
+MuiInputLabel-outlined 
+css-79nsfh-MuiFormLabel-root-MuiInputLabel-root"[39m
+                  
+[33mdata-shrink[39m=[32m"false"[39m
+                  [33mfor[39m=[32m"_r_4s_"[39m
+                  
+[33mid[39m=[32m"_r_4s_-label"[39m
+                [36m>[39m
+                  [0mT├¡tulo[0m
+                [36m</label>[39m
+                [36m<div[39m
+                  
+[33mclass[39m=[32m"MuiInputBase-root 
+MuiOutlinedInput-root MuiInputBase-colorPrimary 
+MuiInputBase-fullWidth MuiInputBase-formControl css-1u
+p3t6r-MuiInputBase-root-MuiOutlinedInput-root"[39m
+                [36m>[39m
+                  [36m<input[39m
+                    
+[33maria-invalid[39m=[32m"false"[39m
+                    
+[33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-
+MuiOutlinedInput-input"[39m
+                    [33mid[39m=[32m"_r_4s_"[39m
+                    [33mtype[39m=[32m"text"[39m
+                    [33mvalue[39m=[32m""[39m
+                  [36m/>[39m
+                  [36m<fieldset[39m
+                    
+[33maria-hidden[39m=[32m"true"[39m
+                    
+[33mclass[39m=[32m"MuiOutlinedInput-notchedOutline 
+css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-n
+otchedOutline"[39m
+                  [36m>[39m
+                    [36m<legend[39m
+                      [33mclass[39m=[32m"css-1n64cs
+d-MuiNotchedOutlined-root"[39m
+                    [36m>[39m
+                      [36m<span>[39m
+                        [0mT├¡tulo[0m
+                      [36m</span>[39m
+                    [36m</legend>[39m
+                  [36m</fieldset>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                
+[33mclass[39m=[32m"MuiFormControl-root 
+MuiFormControl-fullWidth MuiTextField-root 
+css-cmpglg-MuiFormControl-root-MuiTextField-root"[39m
+              [36m>[39m
+                [36m<label[39m
+                  
+[33mclass[39m=[32m"MuiFormLabel-root 
+MuiInputLabel-root MuiInputLabel-formControl 
+MuiInputLabel-animated MuiInputLabel-shrink 
+MuiInputLabel-outlined MuiFormLabel-colorPrimary 
+MuiFormLabel-filled MuiInputLabel-root 
+MuiInputLabel-formControl MuiInputLabel-animated 
+MuiInputLabel-shrink MuiInputLabel-outlined 
+css-1rok73o-MuiFormLabel-root-MuiInputLabel-root"[39m
+                  
+[33mdata-shrink[39m=[32m"true"[39m
+                  [33mfor[39m=[32m"_r_4t_"[39m
+                  
+[33mid[39m=[32m"_r_4t_-label"[39m
+                [36m>[39m
+                  [0mDescripci├│n[0m
+                [36m</label>[39m
+                [36m<div[39m
+                  
+[33mclass[39m=[32m"MuiInputBase-root 
+MuiOutlinedInput-root MuiInputBase-colorPrimary 
+MuiInputBase-fullWidth MuiInputBase-formControl 
+MuiInputBase-multiline css-oj8vyf-MuiInputBase-root-Mu
+iOutlinedInput-root"[39m
+                [36m>[39m
+                  [36m<textarea[39m
+                    
+[33maria-invalid[39m=[32m"false"[39m
+                    
+[33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-w4nesw-MuiInputBase-input-M
+uiOutlinedInput-input"[39m
+                    [33mid[39m=[32m"_r_4t_"[39m
+                    [33mrows[39m=[32m"5"[39m
+                    [33mstyle[39m=[32m"height: 
+0px; overflow: hidden;"[39m
+                  [36m>[39m
+                    [0mPreparar presentaci├│n 
+trimestral
+
+Subtareas sugeridas:
+- [ ] Crear slides de presentaci├│n
+- [ ] Revisar notas[0m
+                  [36m</textarea>[39m
+                  [36m<textarea[39m
+                    
+[33maria-hidden[39m=[32m"true"[39m
+                    
+[33mclass[39m=[32m"MuiInputBase-input 
+MuiOutlinedInput-input css-w4nesw-MuiInputBase-input-M
+uiOutlinedInput-input"[39m
+                    [33mreadonly[39m=[32m""[39m
+                    [33mstyle[39m=[32m"visibility: 
+hidden; position: absolute; overflow: hidden; height: 
+0px; top: 0px; left: 0px; transform: translateZ(0); 
+p...
+ ÔØ» timeout 
+src/tests/integration/TaskFormDialog.test.tsx:106:27
+    104|       await waitFor(() => {
+    105|         const descInput = 
+screen.getByLabelText('Descripci├│n');
+    106|         expect(descInput).toHaveValue(expect.
+stringContaining('SubtareÔÇª
+       |                           ^
+    107|       }, { timeout: 3000 });
+    108|     });
+ ÔØ» runWithExpensiveErrorDiagnosticsDisabled 
+node_modules/@testing-library/dom/dist/config.js:47:12
+ ÔØ» checkCallback node_modules/@testing-library/dom/d
+ist/wait-for.js:124:77
+ ÔØ» Timeout.checkRealTimersCallback node_modules/@tes
+ting-library/dom/dist/wait-for.js:118:16
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[1/3]ÔÄ»
+
+ FAIL  src/tests/unit/task-service.test.ts > 
+taskService (con MSW) > getAll() debe retornar tareas 
+con la estructura correcta
+AssertionError: expected { id: 'test-1', ÔÇª(6) } to 
+have property "category"
+ ÔØ» src/tests/unit/task-service.test.ts:18:18
+     16|     expect(task).toHaveProperty('title');
+     17|     
+expect(task).toHaveProperty('description');
+     18|     expect(task).toHaveProperty('category');
+       |                  ^
+     19|     expect(task).toHaveProperty('status');
+     20|     expect(task).toHaveProperty('subTasks');
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[2/3]ÔÄ»
+
+ FAIL  src/tests/unit/task-service.test.ts > 
+taskService (con MSW) > create() debe crear una tarea 
+y retornarla con id generado
+AssertionError: expected 'pending' to be 'pendiente' 
+// Object.is equality
+
+Expected: [32m"pendi[7mente[27m"[39m
+Received: [31m"pendi[7mng[27m"[39m
+
+ ÔØ» src/tests/unit/task-service.test.ts:36:28
+     34|     
+expect(created.description).toBe(dto.description);
+     35|     expect(created.category).toBe('trabajo');
+     36|     expect(created.status).toBe('pendiente');
+       |                            ^
+     37|     expect(created.subTasks).toEqual([]);
+     38|   });
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[3/3]ÔÄ»
+
+
+ Test Files  2 failed | 12 passed (14)
+      Tests  3 failed | 92 passed (95)
+   Start at  13:03:18
+   Duration  10.46s (transform 1.16s, setup 5.34s, import 11.17s, tests 12.73s, environment 14.43s)
+
