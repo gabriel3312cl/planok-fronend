@@ -2,9 +2,9 @@ import { create } from 'zustand';
 
 interface UIState {
   isFormOpen: boolean;
-  editingTaskId: string | null;
+  editingTaskId: string | number | null;
   searchQuery: string;
-  openForm: (taskId?: string) => void;
+  openForm: (taskId?: string | number) => void;
   closeForm: () => void;
   setSearchQuery: (query: string) => void;
 }

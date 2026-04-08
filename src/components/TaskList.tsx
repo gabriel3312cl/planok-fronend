@@ -5,8 +5,8 @@ import { TaskCard } from './TaskCard';
 interface TaskListProps {
   tasks: Task[];
   isLoading: boolean;
-  onEdit: (id: string) => void;
-  onDelete: (id: string) => void;
+  onEdit: (id: number | string) => void;
+  onDelete: (id: number | string) => void;
 }
 
 function LoadingSkeleton() {

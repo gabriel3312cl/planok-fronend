@@ -22,13 +22,13 @@ export function useTasks() {
   });
 
   const updateMutation = useMutation({
-    mutationFn: ({ id, data }: { id: string; data: UpdateTaskDto }) =>
+    mutationFn: ({ id, data }: { id: string | number; data: UpdateTaskDto }) =>
       taskService.update(id, data),
     onSuccess: () => queryClient.invalidateQueries({ queryKey: TASKS_KEY }),
   });
 
   const deleteMutation = useMutation({
-    mutationFn: (id: string) => taskService.remove(id),
+    mutationFn: (id: string | number) => taskService.remove(id),
     onSuccess: () => queryClient.invalidateQueries({ queryKey: TASKS_KEY }),
   });
 

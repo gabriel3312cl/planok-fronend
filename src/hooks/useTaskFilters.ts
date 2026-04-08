@@ -15,7 +15,7 @@ export function useTaskFilters(tasks: Task[]) {
       (t) =>
         t.title.toLowerCase().includes(q) ||
         t.description.toLowerCase().includes(q) ||
-        t.category.toLowerCase().includes(q),
+        t.priority.toLowerCase().includes(q),
     );
   }, [tasks, searchQuery]);
 

@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query';
 import { aiService } from '../services/ai.service';
-import type { TaskCategory } from '../types/task.types';
+import type { TaskPriority } from '../types/task.types';
 
 /**
  * Custom hook para las funcionalidades de IA.
@@ -23,6 +23,6 @@ export function useAI() {
 
     classifyTask: classifyMutation.mutateAsync,
     isClassifying: classifyMutation.isPending,
-    classifiedCategory: classifyMutation.data as TaskCategory | undefined,
+    classifiedPriority: classifyMutation.data as TaskPriority | undefined,
   };
 }

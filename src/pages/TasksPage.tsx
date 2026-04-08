@@ -24,7 +24,7 @@ export function TasksPage() {
   const { filteredTasks } = useTaskFilters(tasks);
   const { isFormOpen, editingTaskId, openForm, closeForm } = useUIStore();
 
-  const [deleteTarget, setDeleteTarget] = useState<{ id: string; title: string } | null>(null);
+  const [deleteTarget, setDeleteTarget] = useState<{ id: string | number; title: string } | null>(null);
   const [snackbar, setSnackbar] = useState<{ open: boolean; message: string; severity: 'success' | 'error' }>({
     open: false,
     message: '',
@@ -38,7 +38,7 @@ export function TasksPage() {
   };
 
   const handleFormSubmit = useCallback(
-    async (data: CreateTaskDto | { id: string; data: UpdateTaskDto }) => {
+    async (data: CreateTaskDto | { id: string | number; data: UpdateTaskDto }) => {
       try {
         if ('id' in data) {
           await updateTask(data);
@@ -67,12 +67,12 @@ export function TasksPage() {
   }, [deleteTarget, deleteTask]);
 
   const handleEditClick = useCallback(
-    (id: string) => openForm(id),
+    (id: string | number) => openForm(id),
     [openForm],
   );
 
   const handleDeleteClick = useCallback(
-    (id: string) => {
+    (id: string | number) => {
       const task = tasks.find((t) => t.id === id);
       if (task) setDeleteTarget({ id: task.id, title: task.title });
     },

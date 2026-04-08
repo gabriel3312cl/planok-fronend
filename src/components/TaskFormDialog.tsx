@@ -9,12 +9,6 @@ import {
   MenuItem,
   Box,
   Typography,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  IconButton,
-  Chip,
   CircularProgress,
   Alert,
   useMediaQuery,
@@ -22,34 +16,27 @@ import {
 } from '@mui/material';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircle';
-import DeleteOutlineIcon from '@mui/icons-material/Delete';
-import { v4 as uuidv4 } from 'uuid';
-import type { Task, TaskCategory, TaskStatus, SubTask, CreateTaskDto, UpdateTaskDto } from '../types/task.types';
+import type { Task, TaskPriority, TaskStatus, CreateTaskDto, UpdateTaskDto } from '../types/task.types';
 import { useAI } from '../hooks/useAI';
 import { env } from '../config/env';
 
-const CATEGORIES: { value: TaskCategory; label: string }[] = [
-  { value: 'personal', label: 'Personal' },
-  { value: 'trabajo', label: 'Trabajo' },
-  { value: 'urgente', label: 'Urgente' },
-  { value: 'estudio', label: 'Estudio' },
-  { value: 'salud', label: 'Salud' },
-  { value: 'finanzas', label: 'Finanzas' },
-  { value: 'otro', label: 'Otro' },
+const PRIORITIES: { value: TaskPriority; label: string }[] = [
+  { value: 'low', label: 'Baja' },
+  { value: 'medium', label: 'Media' },
+  { value: 'high', label: 'Alta' },
+  { value: 'urgent', label: 'Urgente' },
 ];
 
 const STATUSES: { value: TaskStatus; label: string }[] = [
-  { value: 'pendiente', label: 'Pendiente' },
-  { value: 'en_progreso', label: 'En progreso' },
-  { value: 'completada', label: 'Completada' },
+  { value: 'pending', label: 'Pendiente' },
+  { value: 'completed', label: 'Completada' },
 ];
 
 interface TaskFormDialogProps {
   open: boolean;
   task: Task | null;
   onClose: () => void;
-  onSubmit: (data: CreateTaskDto | { id: string; data: UpdateTaskDto }) => void;
+  onSubmit: (data: CreateTaskDto | { id: number | string; data: UpdateTaskDto }) => void;
   isSubmitting: boolean;
 }
 
@@ -60,9 +47,8 @@ export function TaskFormDialog({ open, task, onClose, onSubmit, isSubmitting }: 
 
   const [title, setTitle] = useState(task?.title ?? '');
   const [description, setDescription] = useState(task?.description ?? '');
-  const [category, setCategory] = useState<TaskCategory>(task?.category ?? 'otro');
-  const [status, setStatus] = useState<TaskStatus>(task?.status ?? 'pendiente');
-  const [subTasks, setSubTasks] = useState<SubTask[]>(task?.subTasks ?? []);
+  const [priority, setPriority] = useState<TaskPriority>(task?.priority ?? 'medium');
+  const [status, setStatus] = useState<TaskStatus>(task?.status ?? 'pending');
   const [errors, setErrors] = useState<{ title?: string; description?: string }>({});
 
   const isEditing = task !== null;
@@ -71,7 +57,6 @@ export function TaskFormDialog({ open, task, onClose, onSubmit, isSubmitting }: 
   const validate = (): boolean => {
     const newErrors: typeof errors = {};
     if (!title.trim()) newErrors.title = 'El título es obligatorio';
-    if (!description.trim()) newErrors.description = 'La descripción es obligatoria';
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -80,38 +65,31 @@ export function TaskFormDialog({ open, task, onClose, onSubmit, isSubmitting }: 
     if (!validate()) return;
 
     if (isEditing && task) {
-      onSubmit({ id: task.id, data: { title, description, category, status, subTasks } });
+      onSubmit({ id: task.id, data: { title, description, priority, status } });
     } else {
-      onSubmit({ title, description, category, status } as CreateTaskDto);
+      onSubmit({ title, description, priority, status } as CreateTaskDto);
     }
   };
 
   const handleSuggestSubtasks = useCallback(async () => {
     if (!description.trim()) return;
     const suggestions = await suggestSubtasks(description);
-    const newSubTasks: SubTask[] = suggestions.map((s) => ({
-      id: uuidv4(),
-      title: s,
-      completed: false,
-    }));
-    setSubTasks((prev) => [...prev, ...newSubTasks]);
+    if (suggestions.length > 0) {
+      const formatted = suggestions.map(s => `- [ ] ${s}`).join('\n');
+      setDescription(prev => `${prev}\n\nSubtareas sugeridas:\n${formatted}`);
+    }
   }, [description, suggestSubtasks]);
 
   const handleClassify = useCallback(async () => {
     if (!title.trim() && !description.trim()) return;
     const result = await classifyTask({ title, description });
-    setCategory(result);
+    // Assuming backend returns one of the valid priorities or we map it implicitly
+    if (['low', 'medium', 'high', 'urgent'].includes(result as any)) {
+      setPriority(result as TaskPriority);
+    } else {
+      setPriority('medium');
+    }
   }, [title, description, classifyTask]);
-
-  const removeSubtask = (id: string) => {
-    setSubTasks((prev) => prev.filter((st) => st.id !== id));
-  };
-
-  const toggleSubtask = (id: string) => {
-    setSubTasks((prev) =>
-      prev.map((st) => (st.id === id ? { ...st, completed: !st.completed } : st)),
-    );
-  };
 
   return (
     <Dialog open={open} onClose={onClose} fullScreen={fullScreen} maxWidth="sm" fullWidth>
@@ -136,18 +114,18 @@ export function TaskFormDialog({ open, task, onClose, onSubmit, isSubmitting }: 
             helperText={errors.description}
             fullWidth
             multiline
-            rows={3}
+            rows={5}
           />
 
           <Box sx={{ display: 'flex', gap: 2, flexDirection: { xs: 'column', sm: 'row' } }}>
             <TextField
               select
-              label="Categoría"
-              value={category}
-              onChange={(e) => setCategory(e.target.value as TaskCategory)}
+              label="Prioridad"
+              value={priority}
+              onChange={(e) => setPriority(e.target.value as TaskPriority)}
               fullWidth
             >
-              {CATEGORIES.map((c) => (
+              {PRIORITIES.map((c) => (
                 <MenuItem key={c.value} value={c.value}>
                   {c.label}
                 </MenuItem>
@@ -195,7 +173,7 @@ export function TaskFormDialog({ open, task, onClose, onSubmit, isSubmitting }: 
                   onClick={handleClassify}
                   disabled={isClassifying || (!title.trim() && !description.trim())}
                 >
-                  {isClassifying ? 'Clasificando...' : 'Auto-clasificar'}
+                  {isClassifying ? 'Clasificando...' : 'Auto-asignar prioridad'}
                 </Button>
               </Box>
 
@@ -207,52 +185,6 @@ export function TaskFormDialog({ open, task, onClose, onSubmit, isSubmitting }: 
             </Box>
           )}
 
-          {/* Subtareas */}
-          {subTasks.length > 0 && (
-            <Box>
-              <Typography variant="subtitle2" sx={{ mb: 0.5 }}>
-                Subtareas ({subTasks.filter((s) => s.completed).length}/{subTasks.length})
-              </Typography>
-              <List dense disablePadding>
-                {subTasks.map((st) => (
-                  <ListItem
-                    key={st.id}
-                    disableGutters
-                    secondaryAction={
-                      <IconButton edge="end" size="small" onClick={() => removeSubtask(st.id)}>
-                        <DeleteOutlineIcon fontSize="small" />
-                      </IconButton>
-                    }
-                  >
-                    <ListItemIcon sx={{ minWidth: 32, cursor: 'pointer' }} onClick={() => toggleSubtask(st.id)}>
-                      <CheckCircleOutlineIcon
-                        fontSize="small"
-                        color={st.completed ? 'success' : 'disabled'}
-                      />
-                    </ListItemIcon>
-                    <ListItemText
-                      primary={
-                        <Typography
-                          variant="body2"
-                          sx={{ textDecoration: st.completed ? 'line-through' : 'none' }}
-                        >
-                          {st.title}
-                        </Typography>
-                      }
-                    />
-                  </ListItem>
-                ))}
-              </List>
-              <Chip
-                label="Generadas por IA"
-                size="small"
-                icon={<AutoAwesomeIcon />}
-                variant="outlined"
-                color="primary"
-                sx={{ mt: 0.5 }}
-              />
-            </Box>
-          )}
         </Box>
       </DialogContent>
 

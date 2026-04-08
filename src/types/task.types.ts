@@ -1,35 +1,29 @@
-export type TaskCategory = 'personal' | 'trabajo' | 'urgente' | 'estudio' | 'salud' | 'finanzas' | 'otro';
+export type TaskPriority = 'low' | 'medium' | 'high' | 'urgent';
 
-export type TaskStatus = 'pendiente' | 'en_progreso' | 'completada';
-
-export interface SubTask {
-  id: string;
-  title: string;
-  completed: boolean;
-}
+export type TaskStatus = 'pending' | 'completed';
 
 export interface Task {
-  id: string;
+  id: number | string;
   title: string;
   description: string;
-  category: TaskCategory;
   status: TaskStatus;
-  subTasks: SubTask[];
-  createdAt: string;
-  updatedAt: string;
+  status_display?: string;
+  priority: TaskPriority;
+  priority_display?: string;
+  created_at: string;
+  updated_at: string;
 }
 
 export interface CreateTaskDto {
   title: string;
-  description: string;
-  category?: TaskCategory;
+  description?: string;
   status?: TaskStatus;
+  priority?: TaskPriority;
 }
 
 export interface UpdateTaskDto {
   title?: string;
   description?: string;
-  category?: TaskCategory;
   status?: TaskStatus;
-  subTasks?: SubTask[];
+  priority?: TaskPriority;
 }

@@ -1,73 +1,107 @@
-# React + TypeScript + Vite
+# Planok - Sistema de Gestion de Tareas (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicacion de Frontend construida con React, Vite y TypeScript para gestionar tareas, integrando asistencia de Inteligencia Artificial. Se conecta a una API construida con Django Rest Framework (DRF) para realizar operaciones CRUD completas y aprovechar procesamiento de lenguaje natural en el cliente.
 
-Currently, two official plugins are available:
+## Arquitectura y Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Las principales herramientas y libreias en este proyecto son:
 
-## React Compiler
+- **React y Vite:** Motor de UI y empaquetador de la aplicacion que ofrecen recargas rapidas en desarrollo.
+- **TypeScript:** Tipado estatico definido para reflejar fielmente los modelos DRF del backend.
+- **Zustand:** Manejo del estado global orientado a la interfaz de usuario.
+- **TanStack React Query:** Gestion asincrona del estado del servidor, peticiones HTTP, cacheo e invalidacion transparente.
+- **Material UI (MUI):** Sistema de diseno y componentes visuales.
+- **Axios:** Cliente HTTP principal utilizado para la comunicacion con el API.
+- **Docker y Docker Compose:** Orquestacion para entornos de desarrollo y preparacion hacia integracion continua y despliegue (CI/CD).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Requisitos Previos
 
-## Expanding the ESLint configuration
+- Node.js (version 20 o superior).
+- Docker y Docker Compose para iniciar ambientes mediante contenedores.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Modelos y API Esperada
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+El Frontend y la capa de servicios (`task.service.ts`) estan adaptados a un Router Base de DRF mapeado en el punto de entrada `/tasks/`.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Estructura de Tareas (Task)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **id** (Numero o Cadena de Texto)
+- **title** (Cadena de Texto, obligatorio)
+- **description** (Cadena de Texto, soporta formato texto con marcas para listas IA)
+- **status** (Valores validos: `pending`, `completed`)
+- **priority** (Valores validos: `low`, `medium`, `high`, `urgent`)
+- **created_at**, **updated_at** (Fechas de sistema)
+
+### Metodos Integrados
+
+- **Listar Tareas:** `GET /tasks/`
+- **Crear Tarea:** `POST /tasks/`
+- **Obtener Tarea:** `GET /tasks/{id}/`
+- **Modificar Tarea:** `PUT /tasks/{id}/` o `PATCH /tasks/{id}/`
+- **Eliminar Tarea:** `DELETE /tasks/{id}/`
+
+## Despliegue con Docker (Entornos Dev y Prod)
+
+Este ecosistema esta disenado bajo un enfoque Multi-Stage ideal para canalizar su despliegue en servidores. El archivo `docker-compose.yml` gestiona dos topologias de red:
+
+### 1. Entorno de Desarrollo (Development)
+Arranca el servidor Vite internamente con un puerto mapeado por defecto y la capacidad de HMR reflejando el codigo en tu archivo local al momento.
+
+Para iniciarlo, ejecuta en la consola:
+```bash
+docker-compose up -d --build frontend-dev
+```
+La maquina entrara en escucha localmente sobre `http://localhost:5173`. Tras esto puedes programar y modificar en tu propia maquina sin preocuparte por tener instaladas las dependencias.
+
+### 2. Entorno de Produccion (Production)
+Pasa sobre el proceso `npm run build` localizando los archivos estaticos minimizados en una segunda imagen de contencion ejecutando Nginx (configurada optimamente previendo enrutamiento PWA via `nginx.conf`).
+
+Para iniciarlo, ejecuta en la consola:
+```bash
+docker-compose up -d --build frontend-prod
+```
+El servidor Nginx sera despachado en tu maquina en el puerto 8080 (`http://localhost:8080`).
+
+## Variables de Entorno
+
+Toda la configuracion principal del aplicativo, como lo es la conexion al API de Django, requiere definir un archivo local base llamado `.env`. En la raiz se halla un archivo guia llamado `.env.example`.
+
+Para usar su conexion:
+
+1. Crea o duplica el archivo llamandolo `.env`.
+2. Completa su forma de ser requerido:
+
+```env
+VITE_API_BASE_URL=http://localhost:8000
+VITE_APP_TITLE=Planok - Gestion de Tareas 
+VITE_AI_ENABLED=true
+VITE_TASKS_PER_PAGE=10
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Ejecucion Manual (Sin contenedores)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Si prefieres omitir Docker y aprovechar NPM integramente en todo momento, ejecuta los siguientes comandos:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Cargar dependencias antes de empezar:
+```bash
+npm install
 ```
+
+Servidor de desarrollo local Vite:
+```bash
+npm run dev
+```
+
+Auditoria rigurosa de tipos estaticos y compilacion local para entorno productivo:
+```bash
+npm run build
+```
+
+Iniciar tests unitarios y de integracion:
+```bash
+npm run test
+```
+
+## Adaptabilidad Inteligente (IA)
+
+Si configuras `VITE_AI_ENABLED=true`, el formulario de edicion o creacion mostrara botones de asistencia automatica impulsados por el modulo IA de la maquina. Dicha integracion es amigable con bases de datos SQL tradicionales provistas por Django REST ya que evita subarreglos encadenados adjuntando un formato estandar de caracteristica-punto (checklist en texto) que se guarda directamente inyectandose en el cuerpo de la variable `description` principal.

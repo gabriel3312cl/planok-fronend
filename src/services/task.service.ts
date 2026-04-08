@@ -8,27 +8,27 @@ import type { TaskRepository } from './task.repository';
  */
 class TaskService implements TaskRepository {
   async getAll(): Promise<Task[]> {
-    const { data } = await httpClient.get<Task[]>('/tasks');
+    const { data } = await httpClient.get<Task[]>('/tasks/');
     return data;
   }
 
-  async getById(id: string): Promise<Task> {
-    const { data } = await httpClient.get<Task>(`/tasks/${id}`);
+  async getById(id: string | number): Promise<Task> {
+    const { data } = await httpClient.get<Task>(`/tasks/${id}/`);
     return data;
   }
 
   async create(dto: CreateTaskDto): Promise<Task> {
-    const { data } = await httpClient.post<Task>('/tasks', dto);
+    const { data } = await httpClient.post<Task>('/tasks/', dto);
     return data;
   }
 
-  async update(id: string, dto: UpdateTaskDto): Promise<Task> {
-    const { data } = await httpClient.put<Task>(`/tasks/${id}`, dto);
+  async update(id: string | number, dto: UpdateTaskDto): Promise<Task> {
+    const { data } = await httpClient.put<Task>(`/tasks/${id}/`, dto);
     return data;
   }
 
-  async remove(id: string): Promise<void> {
-    await httpClient.delete(`/tasks/${id}`);
+  async remove(id: string | number): Promise<void> {
+    await httpClient.delete(`/tasks/${id}/`);
   }
 }
 

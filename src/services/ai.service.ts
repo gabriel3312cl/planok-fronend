@@ -1,12 +1,12 @@
 import { httpClient } from './http.client';
-import type { TaskCategory } from '../types/task.types';
+import type { TaskPriority } from '../types/task.types';
 
 interface SuggestSubtasksResponse {
   subtasks: string[];
 }
 
 interface ClassifyResponse {
-  category: TaskCategory;
+  priority: TaskPriority;
 }
 
 /**
@@ -21,12 +21,12 @@ class AIService {
     return data.subtasks;
   }
 
-  async classifyTask(title: string, description: string): Promise<TaskCategory> {
+  async classifyTask(title: string, description: string): Promise<TaskPriority> {
     const { data } = await httpClient.post<ClassifyResponse>('/ai/classify', {
       title,
       description,
     });
-    return data.category;
+    return (data as any).category || (data as any).priority || 'medium';
   }
 }
 

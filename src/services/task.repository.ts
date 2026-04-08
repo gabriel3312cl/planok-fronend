@@ -6,8 +6,8 @@ import type { Task, CreateTaskDto, UpdateTaskDto } from '../types/task.types';
  */
 export interface TaskRepository {
   getAll(): Promise<Task[]>;
-  getById(id: string): Promise<Task>;
+  getById(id: string | number): Promise<Task>;
   create(data: CreateTaskDto): Promise<Task>;
-  update(id: string, data: UpdateTaskDto): Promise<Task>;
-  remove(id: string): Promise<void>;
+  update(id: string | number, data: UpdateTaskDto): Promise<Task>;
+  remove(id: string | number): Promise<void>;
 }
